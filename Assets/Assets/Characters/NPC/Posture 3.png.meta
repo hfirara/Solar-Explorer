@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47a3fd9550930664c957eb6093954d8c
+guid: 9a86dc19c7c96e24c92bed2a2785f1aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,91 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Satelit_0
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 1125
-        width: 1445.5
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12a8b97d0e8d4464aa37a2bc230485c0
-      internalID: -1960027947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Satelit_1
-      rect:
-        serializedVersion: 2
-        x: 2175
-        y: 1125
-        width: 1445.5
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 727c5686a4b8231468c1ff86b54dd597
-      internalID: -2039023132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Satelit_2
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 0
-        width: 1445.5
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 163284b86b1373c49a618dfc307e4559
-      internalID: -1079853123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Satelit_3
-      rect:
-        serializedVersion: 2
-        x: 2175
-        y: 0
-        width: 1445.5
-        height: 1125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b0ab665c8214ca4c830abc571cd4b47
-      internalID: 399678342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -190,11 +106,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Satelit_0: -1960027947
-      Satelit_1: -2039023132
-      Satelit_2: -1079853123
-      Satelit_3: 399678342
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
