@@ -113,10 +113,10 @@ TextureImporter:
       name: Run_0
       rect:
         serializedVersion: 2
-        x: 134
-        y: 446
-        width: 172
-        height: 326
+        x: 98
+        y: 443
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Run_1
       rect:
         serializedVersion: 2
-        x: 491
-        y: 447
-        width: 178
-        height: 325
+        x: 455
+        y: 443
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: Run_2
       rect:
         serializedVersion: 2
-        x: 819
-        y: 450
-        width: 183
-        height: 322
+        x: 782
+        y: 443
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Run_3
       rect:
         serializedVersion: 2
-        x: 1141
-        y: 456
-        width: 184
-        height: 316
+        x: 1114
+        y: 443
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: Run_4
       rect:
         serializedVersion: 2
-        x: 101
-        y: 53
-        width: 181
-        height: 314
+        x: 80
+        y: 39
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +218,10 @@ TextureImporter:
       name: Run_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 63
-        width: 182
-        height: 304
+        x: 457
+        y: 37
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +239,10 @@ TextureImporter:
       name: Run_6
       rect:
         serializedVersion: 2
-        x: 830
-        y: 64
-        width: 184
-        height: 303
+        x: 806
+        y: 38
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +260,10 @@ TextureImporter:
       name: Run_7
       rect:
         serializedVersion: 2
-        x: 1157
-        y: 56
-        width: 207
-        height: 301
+        x: 1147
+        y: 28
+        width: 221
+        height: 330
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
