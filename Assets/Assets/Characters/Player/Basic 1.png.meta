@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,12 +113,12 @@ TextureImporter:
       name: Basic 1_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 449
-        width: 206
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 86
+        y: 443
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +134,12 @@ TextureImporter:
       name: Basic 1_1
       rect:
         serializedVersion: 2
-        x: 433
-        y: 452
-        width: 216
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 420
+        y: 446
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +155,12 @@ TextureImporter:
       name: Basic 1_2
       rect:
         serializedVersion: 2
-        x: 752
-        y: 458
-        width: 224
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 745
+        y: 452
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +176,12 @@ TextureImporter:
       name: Basic 1_3
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 445
-        width: 224
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1107
+        y: 439
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +197,12 @@ TextureImporter:
       name: Basic 1_4
       rect:
         serializedVersion: 2
-        x: 145
-        y: 60
-        width: 192
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 108
+        y: 54
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +218,12 @@ TextureImporter:
       name: Basic 1_5
       rect:
         serializedVersion: 2
-        x: 501
-        y: 60
-        width: 171
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 442
+        y: 54
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,12 +239,12 @@ TextureImporter:
       name: Basic 1_6
       rect:
         serializedVersion: 2
-        x: 811
-        y: 60
-        width: 169
-        height: 311
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 749
+        y: 54
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +260,12 @@ TextureImporter:
       name: Basic 1_7
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 57
-        width: 172
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1124
+        y: 51
+        width: 240
+        height: 326
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
