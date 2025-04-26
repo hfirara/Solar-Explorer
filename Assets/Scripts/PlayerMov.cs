@@ -9,10 +9,16 @@ public class PlayerMov : MonoBehaviour
     private Animator anim;
     private bool jump;
 
+    [Header("Camera Stuff")]
+    [SerializeField] private GameObject camera;
+    private CameraFollow _cameraFollow;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        _cameraFollow = camera.GetComponent<CameraFollow>();
     }
 
     private void Update()
@@ -21,10 +27,15 @@ public class PlayerMov : MonoBehaviour
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
         if (horizontalInput > 0.01f)
+        {
             transform.localScale = Vector3.one;
+            _cameraFollow.CallTurn();
+        }
         else if (horizontalInput < -0.01f)
+        {
             transform.localScale = new Vector3(-1, 1, 1);
-
+            _cameraFollow.CallTurn();
+        }
         if(Input.GetKey(KeyCode.Space) && jump)
             Jump();
 

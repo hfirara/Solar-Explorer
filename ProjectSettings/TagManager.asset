@@ -8,6 +8,7 @@ TagManager:
   - Background
   - Enemy
   - UI
+  - Camera
   layers:
   - Default
   - TransparentFX
