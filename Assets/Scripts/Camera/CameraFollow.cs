@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
 
     private Coroutine _turnCoroutine;
 
-    private PlayerMov _player;
+    private Player _player;
 
     private bool _isFacingRight;
 
