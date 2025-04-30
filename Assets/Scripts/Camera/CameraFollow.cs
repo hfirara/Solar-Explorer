@@ -10,10 +10,14 @@ public class CameraFollow : MonoBehaviour
     [Header("Flip Rotation State")]
     [SerializeField] private float _flipRotationTime = 0.5f;
 
+    [Header("Camera Limits")]
+    [SerializeField] private float minX;
+    [SerializeField] private float maxX;
+    
+    [SerializeField] private Vector3 offSet; 
+
     private Coroutine _turnCoroutine;
-
     private Player _player;
-
     private bool _isFacingRight;
 
     private void Awake()
@@ -24,14 +28,19 @@ public class CameraFollow : MonoBehaviour
     
     private void Update()
     {
-        transform.position = _playerTransform.position;
+        //transform.position = _playerTransform.position + offSet;
+
+        Vector3 targetPosition = _playerTransform.position + offSet;
+
+        // Clamp X agar kamera tidak lewat batas kiri dan kanan
+        targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
+
+        transform.position = targetPosition;
     }
 
     public void CallTurn()
     {
         _turnCoroutine = StartCoroutine(FlipYLerp());
-
-        //LeanTween = rotateY (gameObject, DetermineEndRotation(), _flipRotationTime), setEaseInOutSine();
     }
 
     private IEnumerator FlipYLerp()

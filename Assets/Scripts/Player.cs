@@ -32,6 +32,21 @@ public class Player : MonoBehaviour
     private Collider2D coll;
     private RaycastHit2D groundHit;
 
+    public static Player Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy (gameObject);
+        }
+
+        else
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
