@@ -19,6 +19,12 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject camera;
     private CameraFollow _cameraFollow;
 
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private float knockbackForce = 5f;
+    private int currentHealth;
+    private bool isHurt = false;
+
     [HideInInspector] public bool IsFacingRight;
 
     private Rigidbody2D rb;
@@ -56,6 +62,8 @@ public class Player : MonoBehaviour
         StartDirectionCheck();
 
         _cameraFollow = camera.GetComponent<CameraFollow>();
+
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -75,6 +83,8 @@ public class Player : MonoBehaviour
         TurnCheck();
         
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        if (isHurt) return;
     }
 
     private void Jumping()
@@ -112,6 +122,8 @@ public class Player : MonoBehaviour
         }
 
         DrawGroundCheck();
+
+        if (isHurt) return;
     }
 
     private void UpdateAnimationState()
@@ -185,7 +197,6 @@ public class Player : MonoBehaviour
         transform.localScale = scale;
         
         IsFacingRight = scale.x > 0f;
-        _cameraFollow.CallTurn();
     }
 
     #endregion
@@ -212,4 +223,45 @@ public class Player : MonoBehaviour
     }
 
     #endregion
+
+    #region Healt function
+
+    public void TakeDamage(Vector2 damageDirection)
+    {
+        if (isHurt) return;
+
+        currentHealth--;
+
+        // Knockback
+        isHurt = true;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(new Vector2(-damageDirection.x * knockbackForce, knockbackForce), ForceMode2D.Impulse);
+        
+        anim.SetTrigger("Damage");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            StartCoroutine(RecoverFromHurt());
+        }
+    }
+
+    private IEnumerator RecoverFromHurt()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isHurt = false;
+    }
+
+    private void Die()
+    {
+        anim.SetTrigger("Die");
+        this.enabled = false;
+        rb.velocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    #endregion 
 }
