@@ -216,5 +216,5 @@ MonoBehaviour:
     m_Bits: 64
   camera: {fileID: 0}
   maxHealth: 10
-  knockbackForce: 5
+  knockbackForce: 8
   IsFacingRight: 0
