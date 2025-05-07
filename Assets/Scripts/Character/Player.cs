@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     private int currentHealth;
     private bool isHurt = false;
 
+    [Header("UI")]
+    [SerializeField] private PlayerUI playerUI;
+
     [HideInInspector] public bool IsFacingRight;
 
     private Rigidbody2D rb;
@@ -62,6 +65,7 @@ public class Player : MonoBehaviour
         StartDirectionCheck();
 
         _cameraFollow = camera.GetComponent<CameraFollow>();
+        playerUI.UpdateHealthBar(currentHealth, maxHealth);
 
         currentHealth = maxHealth;
     }
@@ -231,6 +235,7 @@ public class Player : MonoBehaviour
         if (isHurt) return;
 
         currentHealth--;
+        playerUI.UpdateHealthBar(currentHealth, maxHealth);
 
         // Knockback
         isHurt = true;
