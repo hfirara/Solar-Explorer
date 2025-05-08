@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
-  jumpForce: 5
+  jumpForce: 1
   jumpTime: 0.5
   extraHeight: 0.25
   WhatIsGround:
@@ -216,5 +216,6 @@ MonoBehaviour:
     m_Bits: 64
   camera: {fileID: 0}
   maxHealth: 10
-  knockbackForce: 8
+  knockbackForce: 15
+  playerUI: {fileID: 0}
   IsFacingRight: 0
