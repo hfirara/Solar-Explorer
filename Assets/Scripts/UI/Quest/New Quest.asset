@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3224fdf0d96a66245bff1d482d66272b, type: 3}
   m_Name: New Quest
   m_EditorClassIdentifier: 
-  questTitle: 
-  questDescription: 
-  subQuests: []
+  questTitle: Kumpulkan Fakta
+  questDescription: Mengumpulkan Fakta Setiap Planet
+  subQuests:
+  - description: Kumpulkan 5 Fakta Planet Merkurius
+    isCompleted: 0
+  - description: Kumpulkan 5 Fakta Planet Venus
+    isCompleted: 0

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6981642667735507980}
   - component: {fileID: 7557867918941891649}
-  - component: {fileID: 5295976262378106622}
   - component: {fileID: 1038506620574177772}
   - component: {fileID: 6434262250582362084}
   - component: {fileID: 9197247302065693136}
@@ -89,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5295976262378106622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961265672881856175}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 681e7a96b7846df4fae10848352ebacf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!50 &1038506620574177772
 Rigidbody2D:
   serializedVersion: 4
@@ -215,7 +201,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   camera: {fileID: 0}
-  maxHealth: 10
+  maxHealth: 20
   knockbackForce: 15
   playerUI: {fileID: 0}
   IsFacingRight: 0
