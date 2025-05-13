@@ -7,6 +7,6 @@ public class Quest
     public string questTitle;
     public string questDescription;
     public bool isCompleted;
-    
-    public List<SubQuest> subQuests = new List<SubQuest>();
+
+    public bool isTemporarySubQuest;
 }

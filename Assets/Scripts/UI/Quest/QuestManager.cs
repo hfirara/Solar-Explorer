@@ -6,45 +6,53 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance { get; private set; }
 
-    public List<Quest> quests = new List<Quest>();
+    public List<Quest> activeQuests = new List<Quest>();
     public QuestLogUI questLogUI;
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     private void Start()
     {
-        foreach (var quest in quests)
-        {
-            questLogUI.AddQuest(quest);
-        }
+        // Tambah quest utama
+        // Ini bisa juga lewat NPC nanti
     }
 
-    public void CompleteSubQuest(int questIndex, int subIndex)
-    {
-        quests[questIndex].subQuests[subIndex].isCompleted = true;
-        questLogUI.UpdateQuestUI(quests[questIndex]);
-    }
-
-    public void AddQuest(QuestData questData)
+    public void AddQuest(QuestData data, bool isTemporary = false)
     {
         Quest newQuest = new Quest
         {
-            questTitle = questData.questTitle,
-            questDescription = questData.questDescription,
+            questTitle = data.questTitle,
+            questDescription = data.questDescription,
             isCompleted = false,
-            subQuests = new List<SubQuest>()
+            isTemporarySubQuest = isTemporary
         };
 
-        // Clone subQuests dari QuestData ke Quest runtime
-        foreach (var sub in questData.subQuests)
-        {
-            newQuest.subQuests.Add(new SubQuest { description = sub.description, isCompleted = false });
-        }
-
-        quests.Add(newQuest);
+        activeQuests.Add(newQuest);
         questLogUI.AddQuest(newQuest);
+    }
+
+    public void CompleteQuest(string title)
+    {
+        Quest quest = activeQuests.Find(q => q.questTitle == title);
+        if (quest != null)
+        {
+            quest.isCompleted = true;
+            questLogUI.UpdateQuestUI(quest);
+
+            if (quest.isTemporarySubQuest)
+            {
+                RemoveQuest(quest);
+            }
+        }
+    }
+
+    public void RemoveQuest(Quest quest)
+    {
+        activeQuests.Remove(quest);
+        questLogUI.RemoveQuest(quest);
     }
 }

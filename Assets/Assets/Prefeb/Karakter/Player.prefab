@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
-  jumpForce: 1
+  jumpForce: 0.5
   jumpTime: 0.5
   extraHeight: 0.25
   WhatIsGround:

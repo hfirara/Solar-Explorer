@@ -19,6 +19,10 @@ public class DialogManager : MonoBehaviour
     private string currentSpeaker;
     private int currentIndex = 0;
 
+    public bool IsDialogActive => dialogPanel.activeSelf;
+    private bool isDialogRunning = false;
+    public bool IsDialogRunning => isDialogRunning;
+
     private void Awake()
     {
         if (Instance == null)
@@ -40,6 +44,7 @@ public class DialogManager : MonoBehaviour
 
         currentDialog = data.dialogLines;
         currentIndex = 0;
+        isDialogRunning = true;
 
         dialogPanel.SetActive(true);
         speakerNameText.text = currentDialog[currentIndex].speakerName;
@@ -65,6 +70,7 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(false);
         currentDialog = null;
         currentIndex = 0;
+        isDialogRunning = false;
     }
 
     public void ShowInteractKey(bool show)

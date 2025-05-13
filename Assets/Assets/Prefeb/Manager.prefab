@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4103263667237889530}
-  - component: {fileID: 2248192789451557914}
+  - component: {fileID: 3703925947895248281}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6191387715814588485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2248192789451557914
+--- !u!114 &3703925947895248281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -65,13 +65,19 @@ public class Player : MonoBehaviour
         StartDirectionCheck();
 
         _cameraFollow = camera.GetComponent<CameraFollow>();
-        playerUI.UpdateHealthBar(currentHealth, maxHealth);
 
         currentHealth = maxHealth;
+        playerUI.UpdateHealthBar(currentHealth, maxHealth);
     }
 
     private void Update()
     {
+         if (DialogManager.Instance != null && DialogManager.Instance.IsDialogActive)
+        {
+            rb.velocity = Vector2.zero;
+            anim.SetBool("Run", false);
+            return;
+        }
         //if (Input.GetKey(KeyCode.Space) && jump)
         Move();
         Jumping();
