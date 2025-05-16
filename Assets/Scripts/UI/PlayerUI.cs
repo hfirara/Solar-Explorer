@@ -5,34 +5,63 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
+    [Header("UI References")]
     [SerializeField] private Image healthBarFill;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject questLogUI;
 
+    private bool isGamePaused = false;
+
+    // Update health bar
     public void UpdateHealthBar(float currentHealth, float maxHealth)
     {
         healthBarFill.fillAmount = currentHealth / maxHealth;
     }
 
+    // Pause Game
     public void PauseGame()
     {
+        CloseAllUI(); // pastikan UI lain ditutup
+        pauseMenu.SetActive(true);
         Time.timeScale = 0f;
-        if (pauseMenu != null)
-            pauseMenu.SetActive(true);
+        isGamePaused = true;
     }
 
+    // Resume Game
     public void ResumeGame()
     {
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        if (pauseMenu != null)
-            pauseMenu.SetActive(false);
+        isGamePaused = false;
     }
 
-    public void TogglePause()
+    // Open Quest Log
+    public void OpenQuestLog()
     {
-        bool isPaused = Time.timeScale == 0f;
-        Time.timeScale = isPaused ? 1f : 0f;
+        CloseAllUI(); // pastikan UI lain ditutup
+        questLogUI.SetActive(true);
+        Time.timeScale = 0f;
+        isGamePaused = true;
+    }
 
-        if (pauseMenu != null)
-            pauseMenu.SetActive(!isPaused);
+    // Close Quest Log
+    public void CloseQuestLog()
+    {
+        questLogUI.SetActive(false);
+        Time.timeScale = 1f;
+        isGamePaused = false;
+    }
+
+    // Optional: Tutup semua UI sebelum buka salah satu
+    private void CloseAllUI()
+    {
+        pauseMenu.SetActive(false);
+        questLogUI.SetActive(false);
+    }
+
+    // Untuk pengecekan eksternal (misal: Player.cs ingin tahu status pause)
+    public bool IsGamePaused()
+    {
+        return isGamePaused;
     }
 }
