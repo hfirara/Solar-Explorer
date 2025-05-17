@@ -96,7 +96,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\NPCDialogTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\SubQuest.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\MoveToLeft.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\QuestData.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\QuestionUI.cs" />
     <Compile Include="Assets\Scripts\UI\InteractionUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\QuestManager.cs" />
@@ -112,13 +114,17 @@
     <Compile Include="Assets\Scripts\Input\Controls.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\NPCQuestGiver.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\TriggerZoneSoal.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogData.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\QuestionData.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\MonologTrigger.cs" />
