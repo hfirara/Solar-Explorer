@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 9
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,15 +113,23 @@ TextureImporter:
       name: Roket 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 412
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 103
+        y: 0
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 9ecaa997a5251ea4994cdea456dead13
@@ -134,15 +142,23 @@ TextureImporter:
       name: Roket 1_1
       rect:
         serializedVersion: 2
-        x: 366
-        y: 412
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 476
+        y: 389
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: be8fa773b6b48a043841cabc7e60e081
@@ -155,15 +171,23 @@ TextureImporter:
       name: Roket 1_2
       rect:
         serializedVersion: 2
-        x: 732
-        y: 412
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 847
+        y: 389
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 8e073de791fc75c419b4fc10f6a74bb7
@@ -176,15 +200,23 @@ TextureImporter:
       name: Roket 1_3
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 412
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1187
+        y: 389
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 9d25110a8a3cccf47a5d6584cb471364
@@ -197,15 +229,23 @@ TextureImporter:
       name: Roket 1_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 479
         y: 0
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: ed64f8bc3db9c1d4e9d374b625f45d69
@@ -215,39 +255,26 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roket 1_5
-      rect:
-        serializedVersion: 2
-        x: 366
-        y: 0
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c7824d7b1da7f40891490e3451d78a
-      internalID: 294349427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Roket 1_6
       rect:
         serializedVersion: 2
-        x: 732
+        x: 843
         y: 0
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 2e51f4d066122e446b7a20e107c09020
@@ -260,19 +287,56 @@ TextureImporter:
       name: Roket 1_7
       rect:
         serializedVersion: 2
-        x: 1098
+        x: 1192
         y: 0
-        width: 366
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 182
+        height: 383
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: ac6169906e910f74f9907024230adbd2
       internalID: 1903899645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roket 1_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 435
+        width: 182
+        height: 294
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      physicsShape:
+      - - {x: 0, y: -50}
+        - {x: 50, y: 0}
+        - {x: 0, y: 50}
+        - {x: -50, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc368a9cc804e944bfa88fb03404528
+      internalID: -238747795
       vertices: []
       indices: 
       edges: []
@@ -290,12 +354,32 @@ TextureImporter:
     nameFileIdTable:
       Roket 1_0: 2075618679
       Roket 1_1: -1162309076
+      Roket 1_10: 1042429505
+      Roket 1_11: 553789554
+      Roket 1_12: 95939373
+      Roket 1_13: -831746921
+      Roket 1_14: -873791247
+      Roket 1_15: -1089180105
+      Roket 1_16: -77957226
+      Roket 1_17: -1622787107
+      Roket 1_18: -1960805116
+      Roket 1_19: -238747795
       Roket 1_2: -345563533
+      Roket 1_20: -858186291
+      Roket 1_21: -592570109
+      Roket 1_22: -1074681846
+      Roket 1_23: 1651176257
+      Roket 1_24: -459756701
+      Roket 1_25: -326280170
+      Roket 1_26: -476762218
+      Roket 1_27: 394407137
       Roket 1_3: 1889495338
       Roket 1_4: -1246004847
       Roket 1_5: 294349427
       Roket 1_6: 2097458274
       Roket 1_7: 1903899645
+      Roket 1_8: -653869245
+      Roket 1_9: -24478961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class TriggerZoneSoal : MonoBehaviour
 {
-    [SerializeField] private GameObject soalPanel;
+    [SerializeField] private QuestionManager questionManager;
+    [SerializeField] private PlayerUI playerUI;
+    [SerializeField] private QuestionData questionData; // soal yg ingin ditampilkan
+
+    private bool triggered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (triggered) return;
+
         if (other.CompareTag("Player"))
         {
-            soalPanel.SetActive(true);
-            Time.timeScale = 0f; // pause game saat soal muncul
-        }
-    }
+            if (playerUI != null && playerUI.IsGamePaused()) return;
 
-    public void CloseSoalPanel()
-    {
-        soalPanel.SetActive(false);
-        Time.timeScale = 1f; // resume game
-        Destroy(gameObject); // agar soal ini tidak muncul lagi
+            triggered = true;
+            questionManager.ShowQuestion(questionData, questionManager.AnswerQuestion);
+            gameObject.SetActive(false);
+        }
     }
 }

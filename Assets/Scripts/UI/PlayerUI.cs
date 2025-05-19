@@ -9,6 +9,8 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Image healthBarFill;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject questLogUI;
+    
+    public GameObject gameOverPanel;
 
     private bool isGamePaused = false;
 
@@ -16,6 +18,11 @@ public class PlayerUI : MonoBehaviour
     public void UpdateHealthBar(float currentHealth, float maxHealth)
     {
         healthBarFill.fillAmount = currentHealth / maxHealth;
+    }
+
+    public void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
     }
 
     // Pause Game

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MoveToLeft : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float moveSpeed = 2f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+
+        // Hancurkan object jika sudah jauh ke kiri (opsional)
+        if (transform.position.x < -20f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

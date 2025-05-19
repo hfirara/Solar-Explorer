@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float knockbackForce = 5f;
     private int currentHealth;
     private bool isHurt = false;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
 
     [Header("UI")]
     [SerializeField] private PlayerUI playerUI;
@@ -68,6 +70,9 @@ public class Player : MonoBehaviour
 
         currentHealth = maxHealth;
         playerUI.UpdateHealthBar(currentHealth, maxHealth);
+        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
     }
 
     private void Update()
@@ -243,12 +248,14 @@ public class Player : MonoBehaviour
         currentHealth--;
         playerUI.UpdateHealthBar(currentHealth, maxHealth);
 
-        // Knockback
         isHurt = true;
         rb.velocity = Vector2.zero;
         rb.AddForce(new Vector2(-damageDirection.x * knockbackForce, knockbackForce), ForceMode2D.Impulse);
-        
+
         anim.SetTrigger("Damage");
+
+        // Ubah warna jadi merah
+        spriteRenderer.color = Color.red;
 
         if (currentHealth <= 0)
         {
@@ -263,8 +270,12 @@ public class Player : MonoBehaviour
     private IEnumerator RecoverFromHurt()
     {
         yield return new WaitForSeconds(0.5f);
+
+        // Kembalikan warna ke semula
+        spriteRenderer.color = originalColor;
         isHurt = false;
     }
+
 
     private void Die()
     {

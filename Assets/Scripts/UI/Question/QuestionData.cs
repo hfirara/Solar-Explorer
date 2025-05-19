@@ -5,8 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "QuestionData", menuName = "Quiz/Question Data")]
 public class QuestionData : ScriptableObject
 {
-    [TextArea]
     public string questionText;
-    public List<string> answers = new List<string>();
+    public string[] answers = new string[4];
     public int correctAnswerIndex;
 }
