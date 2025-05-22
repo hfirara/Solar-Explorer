@@ -57,7 +57,7 @@ public class QuestionManager : MonoBehaviour
         }
 
         // Tunggu 2–3 detik
-        yield return new WaitForSecondsRealtime(2.5f);
+        yield return new WaitForSecondsRealtime(1.5f);
 
         // Reset tombol
         for (int i = 0; i < answerButtons.Length; i++)
