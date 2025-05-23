@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q4
   m_EditorClassIdentifier: 
-  questionText: Apa yang menyebabkan Venus menjadi planet terpanas di Tata Surya?
+  questionText: Diameter Bumi sekitar 12.756 km.
   answers:
-  - Kedekatannya dengan Matahari
-  - Aktivitas vulkanik tinggi
-  - Atmosfer tebal dan kandungan karbon dioksida
-  - Banyaknya cincin dan satelit
-  correctAnswerIndex: 2
+  - Benar
+  - Salah
+  correctAnswerIndex: 0

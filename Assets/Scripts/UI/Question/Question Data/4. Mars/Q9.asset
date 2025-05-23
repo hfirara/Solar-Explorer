@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
-  m_Name: Q4
+  m_Name: Q9
   m_EditorClassIdentifier: 
-  questionText: Apa yang menyebabkan Venus menjadi planet terpanas di Tata Surya?
+  questionText: Apa yang menyebabkan warna merah khas Mars?
   answers:
-  - Kedekatannya dengan Matahari
-  - Aktivitas vulkanik tinggi
-  - Atmosfer tebal dan kandungan karbon dioksida
-  - Banyaknya cincin dan satelit
-  correctAnswerIndex: 2
+  - Karbon dioksida
+  - Besi oksida
+  - Es
+  - Nitrogen
+  correctAnswerIndex: 1

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q10
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: "Apa yang dimaksud dengan \u201Cplanet inferior\u201D menurut posisi
+    terhadap Bumi?"
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - Planet dengan satelit paling sedikit
+  - Planet yang ukurannya lebih kecil dari Bumi
+  - Planet yang berada di dalam orbit Bumi (lebih dekat ke Matahari)
+  - Planet yang tidak memiliki cincin
+  correctAnswerIndex: 2

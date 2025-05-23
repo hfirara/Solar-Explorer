@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q8
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: Planet manakah yang memiliki hari lebih panjang daripada tahunnya?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - Merkurius
+  - Venus
+  - Mars
+  - Uranus
+  correctAnswerIndex: 1

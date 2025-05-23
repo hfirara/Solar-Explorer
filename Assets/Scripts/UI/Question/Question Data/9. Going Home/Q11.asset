@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q11
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: Atmosfer Venus sangat tipis, hampir seperti Merkurius
   answers:
   - Benar
   - Salah
-  correctAnswerIndex: 0
+  correctAnswerIndex: 1

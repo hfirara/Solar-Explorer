@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q6
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: Mengapa Jupiter bukan tempat yang cocok untuk kehidupan manusia?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - Karena ukurannya terlalu kecil
+  - Karena atmosfernya penuh uap air
+  - Karena tidak memiliki gravitasi
+  - Karena tersusun dari gas dan tekanan ekstrim
+  correctAnswerIndex: 3
