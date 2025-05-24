@@ -7,7 +7,7 @@ public class RocketController : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float verticalLimit = 5f;
+    [SerializeField] private float verticalLimit = 8f;
 
     [Header("Health")]
     [SerializeField] private int maxHealth = 3;
@@ -124,7 +124,7 @@ public class RocketController : MonoBehaviour
         }
     }
 
-    public void Dodge(Vector2 direction, float distance, float duration)
+    public void Dodge(Vector2 direction, float distance = 4f, float duration = 0.4f)
     {
         if (!isAlive || isDodging) return;
         StartCoroutine(DodgeRoutine(direction, distance, duration));
@@ -136,7 +136,12 @@ public class RocketController : MonoBehaviour
         rb.velocity = Vector2.zero;
 
         Vector3 start = transform.position;
-        Vector3 target = start + (Vector3)(direction.normalized * distance);
+        Vector3 offset = (Vector3)(direction.normalized * distance);
+        
+        // Tambahan: sedikit geser ke depan juga saat menghindar
+        offset += new Vector3(0f, 0f, 0f); 
+
+        Vector3 target = start + offset;
 
         float elapsed = 0f;
         while (elapsed < duration)
@@ -149,4 +154,10 @@ public class RocketController : MonoBehaviour
         transform.position = target;
         isDodging = false;
     }
+
+    public void LaunchForward(float speed)
+    {
+        rb.velocity = Vector2.right * speed;
+    }
+
 }

@@ -76,7 +76,7 @@ public class QuestionManager : MonoBehaviour
     {
         if (isCorrect)
         {
-            rocket.Dodge(Vector2.up, 2f, 0.4f);
+            rocket.Dodge(Vector2.up, 4f, 0.4f); // kalau mau lebih eksplisit
         }
         else
         {
