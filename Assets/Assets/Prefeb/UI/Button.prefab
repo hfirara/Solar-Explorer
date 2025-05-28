@@ -123,18 +123,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerUI, Assembly-CSharp
         m_MethodName: OpenQuestLog
         m_Mode: 1
@@ -158,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
 --- !u!1 &3815522713651065629
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,18 +441,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerUI, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -488,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
 --- !u!1 &7574603260293367332
 GameObject:
   m_ObjectHideFlags: 0

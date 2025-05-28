@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
 --- !u!1 &1953478926460750498
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
 --- !u!1 &4608078281902482208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
 --- !u!1 &8459038006416166280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,4 +1633,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customClip: {fileID: 0}
+  customClip: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
