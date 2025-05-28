@@ -23,10 +23,15 @@ public class RocketController : MonoBehaviour
     private bool isHurt = false;
     private bool isDodging = false;
     private Animator anim;
+
+    AudioManager audioManager;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         rb.gravityScale = 0f;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -67,6 +72,7 @@ public class RocketController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            audioManager.PlaySFX(audioManager.death);
             Die();
         }
     }

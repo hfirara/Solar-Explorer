@@ -10,6 +10,7 @@ TagManager:
   - UI
   - Camera
   - InteractionText
+  - Audio
   layers:
   - Default
   - TransparentFX

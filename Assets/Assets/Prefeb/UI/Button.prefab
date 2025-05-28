@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2001850852262597985}
   - component: {fileID: 1734925841680814967}
   - component: {fileID: 3607914476149338087}
+  - component: {fileID: 4254669231610343791}
   m_Layer: 5
   m_Name: Quest Button
   m_TagString: Untagged
@@ -145,6 +146,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &4254669231610343791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826504717686284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customClip: {fileID: 0}
 --- !u!1 &3815522713651065629
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +342,7 @@ GameObject:
   - component: {fileID: 8961742932599943509}
   - component: {fileID: 2422731803119740959}
   - component: {fileID: 1631711877504920790}
+  - component: {fileID: 6826632584543170632}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -461,6 +476,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &6826632584543170632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368412575373326425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e996da46c1fc304cb8e59677d0f48be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customClip: {fileID: 0}
 --- !u!1 &7574603260293367332
 GameObject:
   m_ObjectHideFlags: 0

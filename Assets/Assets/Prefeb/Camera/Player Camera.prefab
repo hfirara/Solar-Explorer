@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 8808105063123933548}
   - component: {fileID: 7535580572754916633}
   - component: {fileID: 1198198990602824163}
+  - component: {fileID: 4176104164823054661}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: Untagged
@@ -195,3 +196,11 @@ MonoBehaviour:
   maxX: 0
   offSet: {x: 0, y: 0, z: 0}
   followSmoothSpeed: 0.125
+--- !u!81 &4176104164823054661
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506981006093308305}
+  m_Enabled: 1

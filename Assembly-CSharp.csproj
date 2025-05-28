@@ -126,13 +126,16 @@
     <Compile Include="Assets\Scripts\UI\Question\QuestionManagerTF.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\UI\Question\TriggerZoneSoal.cs" />
+    <Compile Include="Assets\Scripts\UI\Audio\VolumeSetting.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogData.cs" />
     <Compile Include="Assets\Scripts\UI\Question\QuestionData.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\MonologTrigger.cs" />
+    <Compile Include="Assets\Scripts\UI\Audio\AudioManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Scripts\UI\Audio\UIButtonSound.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\QuestLogUI.cs" />
   </ItemGroup>
   <ItemGroup>
