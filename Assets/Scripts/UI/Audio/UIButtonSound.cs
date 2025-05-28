@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 [RequireComponent(typeof(Button))]
 public class UIButtonSound : MonoBehaviour
 {
-    [Tooltip("Kosongkan untuk menggunakan default AudioManager buttonClick")]
+    [Tooltip("Kosongkan jika ingin pakai default buttonClick dari AudioManager")]
     public AudioClip customClip;
 
     private void Awake()
@@ -16,17 +16,24 @@ public class UIButtonSound : MonoBehaviour
     }
 
     private void PlayClickSound()
+{
+    if (AudioManager.Instance == null)
     {
-        AudioClip clipToPlay = customClip != null ? customClip : AudioManager.Instance.buttonClick;
-        AudioManager.Instance.PlaySFX(clipToPlay);
-
-        if (clipToPlay != null)
-        {
-            Debug.Log($"[SFX] Memainkan suara: {clipToPlay.name}");
-        }
-        else
-        {
-            Debug.LogWarning("[SFX] Tidak ada AudioClip yang dipilih untuk tombol ini.");
-        }
+        Debug.LogWarning("[SFX] AudioManager belum ada di scene.");
+        return;
     }
+
+    AudioClip clipToPlay = customClip != null ? customClip : AudioManager.Instance.buttonClick;
+
+    if (clipToPlay != null)
+    {
+        AudioManager.Instance.PlaySFX(clipToPlay);
+        Debug.Log($"[SFX] Memainkan suara: {clipToPlay.name}");
+    }
+    else
+    {
+        Debug.LogWarning("[SFX] Tidak ada AudioClip yang dipilih.");
+    }
+}
+
 }

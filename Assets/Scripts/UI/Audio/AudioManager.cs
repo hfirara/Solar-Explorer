@@ -20,18 +20,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip buttonClick;
     public AudioClip death;
 
-    /*private void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // Opsional
         }
         else
         {
             Destroy(gameObject);
         }
-    }*/
+    }
 
     private void Start()
     {

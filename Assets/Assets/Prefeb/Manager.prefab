@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2017735571506065921}
   m_Layer: 0
   m_Name: SFX
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ AudioSource:
   m_GameObject: {fileID: 691813624694015315}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -8174603924844125008, guid: 6ddca20e5543a0149a58875871c6f1fc, type: 2}
+  OutputAudioMixerGroup: {fileID: 1944274557072790317, guid: 54f0fd03fe63c1045a7ab695fd865153, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 3964566047316561836}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,9 +418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 6754816905692700245}
-  sfxSource: {fileID: 2017735571506065921}
-  backgroundMusic: {fileID: 0}
+  SFXSource: {fileID: 2017735571506065921}
+  background: {fileID: 0}
   buttonClick: {fileID: 0}
+  death: {fileID: 0}
 --- !u!1 &6674194535740898880
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +484,7 @@ GameObject:
   - component: {fileID: 6754816905692700245}
   m_Layer: 0
   m_Name: Music
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +513,7 @@ AudioSource:
   m_GameObject: {fileID: 8027294320181284316}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -4458550482767955209, guid: 6ddca20e5543a0149a58875871c6f1fc, type: 2}
+  OutputAudioMixerGroup: {fileID: 9214074613427887623, guid: 54f0fd03fe63c1045a7ab695fd865153, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
