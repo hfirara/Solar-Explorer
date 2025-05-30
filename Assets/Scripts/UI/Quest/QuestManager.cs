@@ -28,11 +28,35 @@ public class QuestManager : MonoBehaviour
             questTitle = data.questTitle,
             questDescription = data.questDescription,
             isCompleted = false,
-            isTemporarySubQuest = isTemporary
+            isTemporarySubQuest = isTemporary,
+
+            targetInfoCategoryID = data.targetInfoCategoryID,
+            targetAmount = data.targetAmount,
+            currentAmount = 0
         };
 
         activeQuests.Add(newQuest);
         questLogUI.AddQuest(newQuest);
+    }
+
+    public void OnInfoCollected(string categoryID)
+    {
+        foreach (Quest quest in activeQuests)
+        {
+            if (!quest.isCompleted && quest.targetInfoCategoryID == categoryID)
+            {
+                quest.currentAmount++;
+
+                if (quest.currentAmount >= quest.targetAmount)
+                {
+                    CompleteQuest(quest.questTitle);
+                }
+                else
+                {
+                    questLogUI.UpdateQuestUI(quest);
+                }
+            }
+        }
     }
 
     public void CompleteQuest(string title)
