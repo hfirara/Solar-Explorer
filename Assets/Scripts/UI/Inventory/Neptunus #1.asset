@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3224fdf0d96a66245bff1d482d66272b, type: 3}
-  m_Name: New Quest
+  m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
+  m_Name: Neptunus #1
   m_EditorClassIdentifier: 
-  questTitle: Kumpulkan 5 Fakta Planet
-  questDescription: 
-  targetInfoCategoryID: Neptunus
-  targetAmount: 10
+  infoTitle: Tahu kah kamu?
+  infoDescription: Memiliki berat 34359 SA
+  categoryID: Neptunus

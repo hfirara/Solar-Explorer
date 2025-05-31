@@ -5,25 +5,26 @@ using UnityEngine.UI;
 
 public class InteractionUI : MonoBehaviour
 {
-    public static InteractionUI Instance;
+    public static InteractionUI Instance { get; private set; }
 
-    [SerializeField] private GameObject interactionTextUI;
+    [SerializeField] private GameObject imageObject;
+    [SerializeField] private TMPro.TMP_Text keyText;
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    private void Start()
+    public void Show(string message = "Tekan E")
     {
-        interactionTextUI.SetActive(false);
+        imageObject.SetActive(true);
+        if (keyText != null)
+            keyText.text = message;
     }
 
-    public void ShowText(bool state)
+    public void Hide()
     {
-        interactionTextUI.SetActive(state);
+        imageObject.SetActive(false);
     }
 }

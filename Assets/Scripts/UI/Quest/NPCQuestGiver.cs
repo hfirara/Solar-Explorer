@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCQuestGiver : MonoBehaviour
 {
-    [Header("Quest Info")]
+    /*[Header("Quest Info")]
     public QuestData questToGive;
 
     private bool playerInRange = false;
@@ -49,5 +49,5 @@ public class NPCQuestGiver : MonoBehaviour
             playerInRange = false;
             InteractionUI.Instance.ShowText(false);
         }
-    }
+    }*/
 }

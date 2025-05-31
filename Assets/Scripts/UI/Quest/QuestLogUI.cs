@@ -15,7 +15,7 @@ public class QuestLogUI : MonoBehaviour
     {
         GameObject questGO = Instantiate(questItemPrefab, questListParent);
         TMP_Text text = questGO.GetComponentInChildren<TMP_Text>();
-        text.text = quest.questTitle;
+        text.text = $"{quest.questTitle} ({quest.currentAmount}/{quest.targetAmount})";
         questToUIMap[quest] = questGO;
     }
 
@@ -24,6 +24,7 @@ public class QuestLogUI : MonoBehaviour
         if (questToUIMap.TryGetValue(quest, out GameObject questGO))
         {
             TMP_Text text = questGO.GetComponentInChildren<TMP_Text>();
+            text.text = $"{quest.questTitle} ({quest.currentAmount}/{quest.targetAmount})";
             text.color = quest.isCompleted ? Color.green : Color.white;
         }
     }

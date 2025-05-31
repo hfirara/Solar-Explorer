@@ -5,10 +5,14 @@ using UnityEngine;
 public class PickupItem : MonoBehaviour
 {
     public InfoItem infoData;
-
+    public InfoDisplayUI infoDisplayUI; // drag dari inspector
+    
     public void OnInteract()
     {
+        Debug.Log("Interacted with item: " + infoData.infoTitle);
+
         InfoInventoryManager.Instance.AddInfo(infoData);
-        Destroy(gameObject); // atau gameObject.SetActive(false);
+        infoDisplayUI.ShowInfo(infoData); // tampilkan panel data
+        Destroy(gameObject);
     }
 }
