@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoInventoryManager : MonoBehaviour
 {
-     public static InfoInventoryManager Instance { get; private set; }
+    /*public static InfoInventoryManager Instance { get; private set; }
 
     private List<InfoItem> collectedInfos = new List<InfoItem>();
 
@@ -43,5 +43,5 @@ public class InfoInventoryManager : MonoBehaviour
 
         return grouped;
     }
-
+*/
 }

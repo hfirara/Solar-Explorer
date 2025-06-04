@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
   m_Name: Neptunus #1
   m_EditorClassIdentifier: 
-  infoTitle: Tahu kah kamu?
-  infoDescription: Memiliki berat 34359 SA
-  categoryID: Neptunus
+  dataLines:
+  - infoDescription: 'Neptunus '
+    categoryID: Neptunus
+    line: Neptunus merupakan planet ke tujuh

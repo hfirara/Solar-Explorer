@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &29186042761820000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8209993864345277256}
+  - component: {fileID: 1846027083240673380}
+  m_Layer: 0
+  m_Name: Pick Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8209993864345277256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29186042761820000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6191387715814588485}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1846027083240673380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29186042761820000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903da0e50716ed14cbee08aa9b2bad57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataPanel: {fileID: 0}
+  dataText: {fileID: 0}
+  interactionKeyUI: {fileID: 0}
 --- !u!1 &101139366899352611
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +84,7 @@ Transform:
   - {fileID: 5241938060694384659}
   - {fileID: 2950414725318273492}
   - {fileID: 5413459940486608435}
+  - {fileID: 8209993864345277256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249021004199937981
@@ -222,6 +270,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7683278066192603107}
   - component: {fileID: 6899839372691045553}
+  - component: {fileID: 7121166025730572882}
+  - component: {fileID: 4725460070595221519}
   m_Layer: 5
   m_Name: UI Manager
   m_TagString: Untagged
@@ -263,7 +313,32 @@ MonoBehaviour:
   healthBarFill: {fileID: 0}
   pauseMenu: {fileID: 0}
   questLogUI: {fileID: 0}
+  pickUI: {fileID: 0}
   gameOverPanel: {fileID: 0}
+--- !u!114 &7121166025730572882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890242172038575629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12d4898eca3b6704d91b440eaed4defe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4725460070595221519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890242172038575629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff774eb9b241ca42b9e1dab68277160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3002851897151178237
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class NPCDialogTrigger : MonoBehaviour
 {
-    public DialogData dialogData;
-    
+    public DialogData dialogData; // Drag data dari inspector
     private bool playerInRange = false;
 
     private void Update()

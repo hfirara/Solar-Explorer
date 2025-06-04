@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class DialogManager : MonoBehaviour
 {
-    public static DialogManager Instance;
+   public static DialogManager Instance;
 
     [Header("UI References")]
     [SerializeField] private GameObject dialogPanel;
@@ -19,9 +20,9 @@ public class DialogManager : MonoBehaviour
     private string currentSpeaker;
     private int currentIndex = 0;
 
-    public bool IsDialogActive => dialogPanel.activeSelf;
     private bool isDialogRunning = false;
     public bool IsDialogRunning => isDialogRunning;
+    public bool IsDialogActive => dialogPanel.activeSelf;
 
     private void Awake()
     {
@@ -42,9 +43,10 @@ public class DialogManager : MonoBehaviour
         if (data == null || data.dialogLines == null || data.dialogLines.Count == 0)
             return;
 
+        UIManager.Instance.SetDialogActive(true); // << Tambahkan ini
+
         currentDialog = data.dialogLines;
         currentIndex = 0;
-        isDialogRunning = true;
 
         dialogPanel.SetActive(true);
         speakerNameText.text = currentDialog[currentIndex].speakerName;
@@ -70,7 +72,8 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(false);
         currentDialog = null;
         currentIndex = 0;
-        isDialogRunning = false;
+
+        UIManager.Instance.SetDialogActive(false); // << Tambahkan ini
     }
 
     public void ShowInteractKey(bool show)

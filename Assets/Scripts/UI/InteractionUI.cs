@@ -2,29 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InteractionUI : MonoBehaviour
 {
-    public static InteractionUI Instance { get; private set; }
+    [SerializeField] private GameObject interactionUI;
+    [SerializeField] private TMP_Text promptText;
 
-    [SerializeField] private GameObject imageObject;
-    [SerializeField] private TMPro.TMP_Text keyText;
-
-    private void Awake()
+    private void Start()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (interactionUI != null)
+            interactionUI.SetActive(false);
     }
 
-    public void Show(string message = "Tekan E")
+    public void Show(string message)
     {
-        imageObject.SetActive(true);
-        if (keyText != null)
-            keyText.text = message;
+        if (interactionUI != null)
+            interactionUI.SetActive(true);
+
+        if (promptText != null)
+            promptText.text = message;
     }
 
     public void Hide()
     {
-        imageObject.SetActive(false);
+        if (interactionUI != null)
+            interactionUI.SetActive(false);
+    }
+
+    // Optional: biar tetap bisa pakai trigger kayak sebelumnya
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Show("Tekan E"); // default message
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Hide();
+        }
     }
 }

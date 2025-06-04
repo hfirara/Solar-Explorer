@@ -9,6 +9,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private Image healthBarFill;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject questLogUI;
+    [SerializeField] private GameObject pickUI;
     
     public GameObject gameOverPanel;
 
@@ -25,7 +26,7 @@ public class PlayerUI : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
-    // Pause Game
+    #region Pause Game
     public void PauseGame()
     {
         CloseAllUI(); // pastikan UI lain ditutup
@@ -34,15 +35,15 @@ public class PlayerUI : MonoBehaviour
         isGamePaused = true;
     }
 
-    // Resume Game
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
     }
+    #endregion
 
-    // Open Quest Log
+    #region Quest Log
     public void OpenQuestLog()
     {
         CloseAllUI(); // pastikan UI lain ditutup
@@ -51,19 +52,30 @@ public class PlayerUI : MonoBehaviour
         isGamePaused = true;
     }
 
-    // Close Quest Log
     public void CloseQuestLog()
     {
         questLogUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
     }
+    #endregion
+
+    #region Pick UI
+
+    public void ClosePick()
+    {
+        pickUI.SetActive(false);
+        Time.timeScale = 1f;
+        isGamePaused = false;
+    }
+    #endregion
 
     // Optional: Tutup semua UI sebelum buka salah satu
     private void CloseAllUI()
     {
         pauseMenu.SetActive(false);
         questLogUI.SetActive(false);
+        pickUI.SetActive(false);
     }
 
     // Untuk pengecekan eksternal (misal: Player.cs ingin tahu status pause)
