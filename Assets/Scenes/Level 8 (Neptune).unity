@@ -2293,7 +2293,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.012905121, y: 0.30976927}
+  m_Offset: {x: 0.06593704, y: 0.53515303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2304,7 +2304,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.878868, y: 3.529783}
+  m_Size: {x: 8.689537, y: 3.9805505}
   m_EdgeRadius: 0
 --- !u!114 &767542752
 MonoBehaviour:
@@ -2333,7 +2333,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1748615434}
-  - {fileID: 1634761657}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772033829
@@ -3221,7 +3220,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 767542753}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2005872290642419137, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: keyText
@@ -3265,11 +3264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8362308098692013682, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.8899994
+      value: 49.37
       objectReference: {fileID: 0}
     - target: {fileID: 8362308098692013682, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7000003
+      value: 3.1800003
       objectReference: {fileID: 0}
     - target: {fileID: 8362308098692013682, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5509,11 +5508,6 @@ PolygonCollider2D:
 --- !u!1 &1634761656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7245839815067658180, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
-  m_PrefabInstance: {fileID: 998649827}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1634761657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8362308098692013682, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
   m_PrefabInstance: {fileID: 998649827}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1634761658 stripped
@@ -11239,4 +11233,5 @@ SceneRoots:
   - {fileID: 1018877318}
   - {fileID: 1294406371}
   - {fileID: 2026676948}
+  - {fileID: 998649827}
   - {fileID: 767542753}

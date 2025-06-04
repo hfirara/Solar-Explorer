@@ -9,11 +9,11 @@ public class InteractionUI : MonoBehaviour
     [SerializeField] private GameObject interactionUI;
     [SerializeField] private TMP_Text promptText;
 
-    private void Start()
+    /*private void Start()
     {
         if (interactionUI != null)
             interactionUI.SetActive(false);
-    }
+    }*/
 
     public void Show(string message)
     {
@@ -28,22 +28,5 @@ public class InteractionUI : MonoBehaviour
     {
         if (interactionUI != null)
             interactionUI.SetActive(false);
-    }
-
-    // Optional: biar tetap bisa pakai trigger kayak sebelumnya
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Show("Tekan E"); // default message
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Hide();
-        }
     }
 }
