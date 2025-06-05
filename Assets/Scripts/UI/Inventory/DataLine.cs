@@ -6,8 +6,5 @@ using System;
 [Serializable]
 public class DataLine
 {
-    public string infoDescription;
-
-    public string categoryID; // Contoh: "planet_bumi"
     [TextArea] public string line;
 }

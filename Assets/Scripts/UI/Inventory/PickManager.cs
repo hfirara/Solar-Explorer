@@ -86,6 +86,9 @@ public class PickManager : MonoBehaviour
 
         if (currentTrigger != null)
         {
+            // Update quest progress berdasarkan categoryID dari infoItem
+            QuestManager.Instance.OnInfoCollected(currentTrigger.infoItem.categoryID);
+
             Destroy(currentTrigger.gameObject);
             currentTrigger = null;
         }
