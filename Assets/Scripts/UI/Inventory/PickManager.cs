@@ -54,7 +54,7 @@ public class PickManager : MonoBehaviour
         isDataRunning = true; 
 
         dataPanel.SetActive(true);
-        dataText.text = currentData[currentIndex].line;
+        dataText.text = currentData[currentIndex].description;
 
         if (dataButton != null)
             dataButton.gameObject.SetActive(true);
@@ -88,6 +88,7 @@ public class PickManager : MonoBehaviour
         {
             // Update quest progress berdasarkan categoryID dari infoItem
             QuestManager.Instance.OnInfoCollected(currentTrigger.infoItem.categoryID);
+            InventoryInfoManager.Instance.AddInfo(currentTrigger.infoItem);
 
             Destroy(currentTrigger.gameObject);
             currentTrigger = null;

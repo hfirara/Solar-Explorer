@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\Inventory\InventoryInfoManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InfoItem.cs" />
@@ -136,7 +137,6 @@
     <Compile Include="Assets\Scripts\UI\Audio\VolumeSetting.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogData.cs" />
-    <Compile Include="Assets\Scripts\UI\Inventory\InfoInventoryManager.cs" />
     <Compile Include="Assets\Scripts\UI\Question\QuestionData.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />

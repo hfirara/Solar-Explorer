@@ -6,5 +6,5 @@ using System;
 [Serializable]
 public class DataLine
 {
-    [TextArea] public string line;
+    [TextArea] public string description;
 }

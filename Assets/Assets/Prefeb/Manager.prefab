@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataPanel: {fileID: 0}
   dataText: {fileID: 0}
+  dataButton: {fileID: 0}
   interactionKeyUI: {fileID: 0}
 --- !u!1 &101139366899352611
 GameObject:
@@ -685,7 +686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5413459940486608435}
-  - component: {fileID: 6182606200230172038}
+  - component: {fileID: 3239379072534073398}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -708,7 +709,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6191387715814588485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6182606200230172038
+--- !u!114 &3239379072534073398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,7 +718,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8612639310273028957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14382cd739892d3428a7f06154e47219, type: 3}
+  m_Script: {fileID: 11500000, guid: 15834756dc3a59f4fbe125adf9e66906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &9073489384348994954
