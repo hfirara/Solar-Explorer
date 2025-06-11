@@ -6,14 +6,14 @@ using TMPro;
 
 public class InteractionUI : MonoBehaviour
 {
-    [SerializeField] private GameObject interactionUI;
-    [SerializeField] private TMP_Text promptText;
+    [SerializeField] private GameObject uiObject;
+    [SerializeField] private TMP_Text keyText;
 
     /*private void Start()
     {
         if (interactionUI != null)
             interactionUI.SetActive(false);
-    }*/
+    }
 
     public void Show(string message)
     {
@@ -28,5 +28,17 @@ public class InteractionUI : MonoBehaviour
     {
         if (interactionUI != null)
             interactionUI.SetActive(false);
+    }*/
+
+    public void Show(string key, Vector3 worldPosition)
+    {
+        keyText.text = key;
+        uiObject.SetActive(true);
+        transform.position = worldPosition;
+    }
+
+    public void Hide()
+    {
+        uiObject.SetActive(false);
     }
 }
