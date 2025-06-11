@@ -57,7 +57,7 @@ public class PickManager : MonoBehaviour
         }
     }
 
-    public void RegisterTrigger(PickTrigger trigger)
+    /*public void RegisterTrigger(PickTrigger trigger)
     {
         if (!triggersInRange.Contains(trigger))
             triggersInRange.Add(trigger);
@@ -73,7 +73,7 @@ public class PickManager : MonoBehaviour
             currentTrigger = null;
             ShowInteractKey(false);
         }
-    }
+    }*/
 
 
     private void FindNearestTrigger()
