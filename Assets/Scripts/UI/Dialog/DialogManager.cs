@@ -14,8 +14,15 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogText;
     [SerializeField] private TMP_Text speakerNameText;
     [SerializeField] private Button nextButton;
-    [SerializeField] private GameObject interactionKeyUI;
+    [SerializeField] private InteractionUI interactionKeyUI;
 
+    [Header("Detection")]
+    [SerializeField] private float detectionRadius = 2f;
+    [SerializeField] private LayerMask pickLayer;
+    [SerializeField] private Transform playerTransform;
+
+    private NPCDialogTrigger currentTrigger;
+    private readonly List<DialogLine> triggersInRange = new List<DialogLine>();
     private List<DialogLine> currentDialog;
     private string currentSpeaker;
     private int currentIndex = 0;
@@ -36,6 +43,47 @@ public class DialogManager : MonoBehaviour
     {
         dialogPanel.SetActive(false);
         nextButton.onClick.AddListener(NextLine);
+    }
+
+    private void Update()
+    {
+        if (!isDialogRunning)
+        {
+            FindNearestTrigger();
+        }
+    }
+
+    private void FindNearestTrigger()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(playerTransform.position, detectionRadius, pickLayer);
+
+        float closestDistance = float.MaxValue;
+        NPCDialogTrigger closestTrigger = null;
+
+        foreach (var hit in hits)
+        {
+            NPCDialogTrigger trigger = hit.GetComponent<NPCDialogTrigger>();
+            if (trigger != null)
+            {
+                float dist = Vector2.Distance(playerTransform.position, hit.transform.position);
+                if (dist < closestDistance)
+                {
+                    closestDistance = dist;
+                    closestTrigger = trigger;
+                }
+            }
+        }
+
+        if (closestTrigger != currentTrigger)
+        {
+            ShowInteractKey(false);
+            currentTrigger = closestTrigger;
+
+            if (currentTrigger != null)
+            {
+                ShowInteractKey(true, currentTrigger.transform.position);
+            }
+        }
     }
 
     public void StartDialog(DialogData data)
@@ -76,9 +124,13 @@ public class DialogManager : MonoBehaviour
         UIManager.Instance.SetDialogActive(false); // << Tambahkan ini
     }
 
-    public void ShowInteractKey(bool show)
+    public void ShowInteractKey(bool show, Vector3? position = null)
     {
-        if (interactionKeyUI != null)
-            interactionKeyUI.SetActive(show);
+        if (interactionKeyUI == null) return;
+
+        if (position.HasValue)
+            interactionKeyUI.Show("E", position.Value);
+        else
+            interactionKeyUI.Hide();
     }
 }

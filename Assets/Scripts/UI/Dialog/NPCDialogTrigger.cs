@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class NPCDialogTrigger : MonoBehaviour
 {
-    public DialogData dialogData; // Drag data dari inspector
-    private bool playerInRange = false;
+    public DialogData dialogData;
 
-    private void Update()
-    {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            DialogManager.Instance.StartDialog(dialogData);
-        }
-    }
+    private bool playerInRange = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            DialogManager.Instance.ShowInteractKey(true); // Tampilkan icon E
+            DialogManager.Instance.ShowInteractKey(true);
         }
     }
 
@@ -29,7 +22,15 @@ public class NPCDialogTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            DialogManager.Instance.ShowInteractKey(false); // Sembunyikan icon E
+            DialogManager.Instance.ShowInteractKey(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            DialogManager.Instance.StartDialog(dialogData);
         }
     }
 }

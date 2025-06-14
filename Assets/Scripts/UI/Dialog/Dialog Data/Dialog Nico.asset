@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
+  m_Name: Dialog Nico
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - speakerName: Nico
+    line: Hai, akhirnya dateng juga! Aku kira kamu nyasar di kantin.
+  - speakerName: Nico
+    line: Gimana rasanya jadi penjelajah resmi?
+  - speakerName: Astro
+    line: Masih agak gak percaya sih.
+  - speakerName: Astro
+    line: Emang beneran, ya? Kita bisa nyari planet lain buat ditinggali?
+  - speakerName: Nico
+    line: Itulah tujuannya! Soalnya Bumi udah mulai rusak. Jadi kita harus cari tahu
+      apakah ada planet lain yang cocok buat hidup.
+  - speakerName: Nico
+    line: Tapi sebelum itu, kamu harus paham dulu soal Tata Surya. Kamu masih inget
+      gak?
+  - speakerName: Astro
+    line: Itu yang ada Matahari di tengah dan planet-planet mengelilinginya, kan?
+  - speakerName: Nico
+    line: Yap, dan semuanya punya ciri khas masing-masing.
+  - speakerName: Nico
+    line: Nah, misi kamu adalah kumpulin 10 fakta penting dari setiap planet yang
+      kamu kunjungi!
+  - speakerName: Nico
+    line: Dengan itu kita bisa nilai planet mana yang berpotensi jadi "Bumi kedua".
+  - speakerName: Astro
+    line: Wah, seru juga. Terus aku mulai dari mana?
+  - speakerName: Nico
+    line: Kamu coba deh ngobrol sama Lina. Dia jago soal gerakan planet. Kalo kamu
+      ngerti itu, semua bakal lebih masuk akal.

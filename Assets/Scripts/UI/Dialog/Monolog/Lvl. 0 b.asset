@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
-  m_Name: NPC Dialog
+  m_Name: Lvl. 0 b
   m_EditorClassIdentifier: 
   dialogLines:
-  - speakerName: NPC
-    line: Hai, Astro!
+  - speakerName: Astro
+    line: Sekarang aku mengerti. Ini bukan misi biasa.
+  - speakerName: Astro
+    line: Aku harus mencari fakta dan pahami setiap planet.
+  - speakerName: Astro
+    line: Siapa tahu ada harapan baru.
+  - speakerName: Astro
+    line: 'Baiklah... planet pertama: Merkurius. Saatnya berangkat.'

@@ -7,6 +7,5 @@ using System;
 public class DialogLine
 {
     public string speakerName;
-    [TextArea(2, 5)]
-    public string line;
+    [TextArea] public string line;
 }

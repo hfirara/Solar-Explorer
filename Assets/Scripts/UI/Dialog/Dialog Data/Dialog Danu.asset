@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
+  m_Name: Dialog Danu
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - speakerName: Danu
+    line: Yo, Astro!
+  - speakerName: Danu
+    line: Kamu seriusan bakal keliling planet?
+  - speakerName: Astro
+    line: 'Iya, agak deg-degan sih. '
+  - speakerName: Astro
+    line: Oh, iya, Lina bilang kamu ngerti banget soal jenis - jenis planet?
+  - speakerName: Danu
+    line: 'Udah kayak makanan, planet juga ada kategorinya. '
+  - speakerName: Danu
+    line: 'Ada kategori Inferior dan Superior. Kategori ini tergantung jaraknya dari
+      Bumi. '
+  - speakerName: Danu
+    line: Planet Inferior itu planet-planet yang letaknya sebelum Bumi, yaitu Merkurius
+      dan Venus.
+  - speakerName: Danu
+    line: Sedangkan planet Superior itu planet-planet yang letaknya setelah Bumi,
+      seperti Mars, Jupiter, Saturnus, Uranus, dan Neptunus.
+  - speakerName: Danu
+    line: Lalu ada kategori Dalam dan Luar. Kategori ini berdasarkan sabuk asteroid.
+  - speakerName: Danu
+    line: Planet Dalam itu planet-planet yang berada dalam orbit lintasan asteroid,
+      yaitu Merkurius, Venus, Bumi, dan Mars.
+  - speakerName: Danu
+    line: Sedangkan planet Luar itu planet di luar orbit lintasan asteroid, beranggotakan
+      Jupiter, Saturnus, Uranus, dan Neptunus.
+  - speakerName: Danu
+    line: Terakhir, ada kategori Terestrial dan Jovian. Kategori ini berdasarkan
+      ukuran dan komposisi zat pembentuknya.
+  - speakerName: Danu
+    line: Planet Terestrial disebut Planet Kuno atau Ancient Planets. Planet-planet
+      yang dapat diamati tanpa alat bantu, dan terdiri atas batuan sebagai bahan
+      penyusunnya, beranggotakan Merkurius, Venus, Bumi, Mars.
+  - speakerName: Danu
+    line: Sedangkan planet Jovian disebut juga Planet Raksasa Gas atau The Gas Giants
+      merupakan planet-planet besar yang tersusun dari gas. Beranggotakan Jupiter,
+      Saturnus, Uranus, dan Neptunus
+  - speakerName: Astro
+    line: Ternyata Bumi itu planet terestrial.
+  - speakerName: Astro
+    line: Tapi biar makin paham soal Tata Surya secara keseluruhan, coba kamu temui
+      Sifa.

@@ -89,13 +89,16 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\CategoryButton.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\PickManager.cs" />
+    <Compile Include="Assets\Scripts\UI\SceneFader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
+    <Compile Include="Assets\Scripts\UI\IntroKeyTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InfoDisplayUI.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\Quest.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\PickupTrigger .cs" />
     <Compile Include="Assets\Scripts\Character\Player.cs" />
+    <Compile Include="Assets\Scripts\UI\TriggerFadeScene.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />

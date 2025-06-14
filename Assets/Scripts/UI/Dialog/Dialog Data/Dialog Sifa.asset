@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
+  m_Name: Dialog Sifa
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - speakerName: Sifa
+    line: Wah, kamu akhirnya sampai juga. Danu nyuruh ke sini, ya?
+  - speakerName: Astro
+    line: Iya, dia bilang kamu punya banyak fakta seru soal Tata Surya.
+  - speakerName: Sifa
+    line: Hehe, itu bener. Misalnya, kamu tahu gak kalau Tata Surya tuh punya 8 planet,
+      5 planet kerdil, lebih dari 200 bulan, hampir 1 juta asteroid, bahkan ribuan
+      komet!
+  - speakerName: Astro
+    line: Wah! Seperti lalu lintas sibuk di luar angkasa!
+  - speakerName: Sifa
+    line: Benar. Dan satu hal menarik, nama "Tata Surya" itu berasal dari kata "Surya",
+      nama lain dari Matahari.
+  - speakerName: Sifa
+    line: Ohh! Makanya disebut Solar System dalam bahasa Inggris?
+  - speakerName: Sifa
+    line: Tepat! Dalam bahasa Latin, Sol berarti Matahari.
+  - speakerName: Sifa
+    line: Nah, sekarang kamu udah siap. Saatnya mulai petualanganmu dan cari tahu
+      apakah ada rumah baru untuk manusia di antara bintang-bintang.
+  - speakerName: Sifa
+    line: Good luck, Astro!
