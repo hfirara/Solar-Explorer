@@ -30,17 +30,6 @@ public class InventoryInfoManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            if (panel.activeSelf)
-                ClosePanel();
-            else
-                OpenPanel();
-        }
-    }
-
     public void AddInfo(InfoItem info)
     {
         if (!categorizedInfos.ContainsKey(info.categoryID))

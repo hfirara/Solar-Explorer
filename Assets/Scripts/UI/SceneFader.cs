@@ -5,7 +5,7 @@ using System.Collections;
 
 public class SceneFader : MonoBehaviour
 {
-     [SerializeField] private CanvasGroup fadeCanvasGroup;
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 0.5f; // ← fade lebih cepat
     [SerializeField] private string sceneToLoad;
 

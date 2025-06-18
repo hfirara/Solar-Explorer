@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
-  m_Name: Q5
+  m_Script: {fileID: 11500000, guid: 3224fdf0d96a66245bff1d482d66272b, type: 3}
+  m_Name: Neptunus Trigger Quest
   m_EditorClassIdentifier: 
-  questionText: 
-  answers:
-  - 
-  - 
-  - 
-  - 8
-  correctAnswerIndex: 0
+  questTitle: Kumpulkan 5 Fakta Planet
+  questDescription: 
+  targetInfoCategoryID: Neptunus
+  targetAmount: 10

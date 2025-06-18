@@ -69,6 +69,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\Character\Enemy.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InfoItem.cs" />
+    <Compile Include="Assets\Scripts\UI\TriggerFadeLayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Input\UserInput.cs" />
     <Compile Include="Assets\Scripts\UI\EndLevelTrigger.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\UI\Quest\SubQuest.cs" />
     <Compile Include="Assets\Scripts\UI\Question\MoveToLeft.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\QuestData.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\QuestionSequenceManager.cs" />
     <Compile Include="Assets\Scripts\UI\Question\QuestionUI.cs" />
     <Compile Include="Assets\Scripts\UI\InteractionUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\UI\LayerFader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\DataLine.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
