@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q2
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: "Apa alasan Merkurius dinamai sesuai nama dewa Romawi \u201CMercury\u201D?"
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - Karena memiliki banyak cincin
+  - Karena terlihat saat malam hari
+  - Karena pergerakannya sangat cepat
+  - Karena letaknya paling jauh
+  correctAnswerIndex: 2

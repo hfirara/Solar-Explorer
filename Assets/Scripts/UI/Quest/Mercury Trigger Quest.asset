@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3224fdf0d96a66245bff1d482d66272b, type: 3}
   m_Name: Mercury Trigger Quest
   m_EditorClassIdentifier: 
-  questTitle: Kumpulkan 5 Fakta Planet
+  questTitle: Kumpulkan 10 Fakta Planet Merkurius
   questDescription: 
   targetInfoCategoryID: Merkurius
   targetAmount: 10

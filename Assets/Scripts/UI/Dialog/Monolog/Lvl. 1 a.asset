@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogLines:
   - speakerName: Astro
-    line: Hai
+    line: Gersang, panas, dan sunyi... inikah wajah Merkurius?
+  - speakerName: Astro
+    line: Dekat sekali dengan Matahari... rasanya seperti dipanggang.
+  - speakerName: Astro
+    line: Tapi tetap harus mencari petunjuk... sekecil apa pun.

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q5
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: Periode rotasi planet Merkurius adalah sekitar...
   answers:
-  - 
-  - 
-  - 
-  - 8
-  correctAnswerIndex: 0
+  - 24 hari
+  - 59 hari
+  - 88 hari
+  - 365 hari
+  correctAnswerIndex: 1

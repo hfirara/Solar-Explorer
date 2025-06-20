@@ -13,7 +13,13 @@ EditorBuildSettings:
     guid: 781971ca4b047ee499be6ef25a93d2e9
   - enabled: 1
     path: Assets/Scenes/Level 1 (Mercury).unity
-    guid: 21e00803ec03f824798882e64f5be523
+    guid: 99cbf088443705e4a9e3a4acceef2886
+  - enabled: 1
+    path: Assets/Scenes/Level 1.1 (Quiz).unity
+    guid: 868229401542af84ea72da598f021a03
+  - enabled: 1
+    path: Assets/Scenes/Level 2 (Venus).unity
+    guid: 8490d47259404624bbd1d12cf6131edb
   - enabled: 1
     path: Assets/Scenes/Level 8 (Neptune).unity
     guid: 4a45fbd6ea888664093375ec883c6eb0
