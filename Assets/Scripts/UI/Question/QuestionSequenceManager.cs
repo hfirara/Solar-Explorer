@@ -6,6 +6,8 @@ using TMPro;
 
 public class QuestionSequenceManager : MonoBehaviour
 {
+    public static QuestionSequenceManager Instance { get; private set; }
+
     [Header("Managers")]
     public QuestionManager multipleChoiceManager;
     public QuestionManagerTF trueFalseManager;
@@ -20,19 +22,34 @@ public class QuestionSequenceManager : MonoBehaviour
     [Header("Result Panel")]
     public GameObject panelResult;
     public TMP_Text textScore;
-    public Image[] stars; // 3 bintang
+    public Image[] stars;
 
     private int currentQuestionIndex = 0;
     private int correctCount = 0;
+    private bool isRunning = false;
 
-    private void Start()
+    public bool IsRunning => isRunning;
+    public int GetCorrectCount() => correctCount;
+
+    private void Awake()
     {
         panelResult.SetActive(false);
         fadeCanvas.alpha = 1f;
-        StartCoroutine(StartSequence());
+        gameObject.SetActive(false); // Agar tidak langsung aktif
     }
 
-    private IEnumerator StartSequence()
+    public void StartQuestionSequence()
+    {
+        // Reset jika diakses ulang
+        panelResult.SetActive(false);
+        currentQuestionIndex = 0;
+        correctCount = 0;
+        isRunning = true;
+
+        StartCoroutine(SequenceRoutine());
+    }
+
+    private IEnumerator SequenceRoutine()
     {
         yield return FadeIn();
         yield return ShowNextQuestion();
@@ -44,12 +61,12 @@ public class QuestionSequenceManager : MonoBehaviour
         {
             yield return FadeOut();
             ShowResult();
+            isRunning = false;
             yield return FadeIn();
             yield break;
         }
 
         var question = allQuestions[currentQuestionIndex];
-
         bool isAnswered = false;
         bool isCorrect = false;
 
@@ -58,17 +75,12 @@ public class QuestionSequenceManager : MonoBehaviour
             isCorrect = result;
         };
 
+        // Tentukan jenis soal
         if (question.answers.Length == 2)
-
-        {
             trueFalseManager.ShowQuestion(question, callback);
-        }
         else
-        {
             multipleChoiceManager.ShowQuestion(question, callback);
-        }
 
-        // Tunggu sampai dijawab
         yield return new WaitUntil(() => isAnswered);
 
         if (isCorrect) correctCount++;

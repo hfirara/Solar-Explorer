@@ -49,32 +49,8 @@ public class PickManager : MonoBehaviour
         if (!isDataRunning)
         {
             FindNearestTrigger();
-
-            /*if (currentTrigger != null && Input.GetKeyDown(KeyCode.E))
-            {
-                StartData(currentTrigger.infoItem, currentTrigger);
-            }*/
         }
     }
-
-    /*public void RegisterTrigger(PickTrigger trigger)
-    {
-        if (!triggersInRange.Contains(trigger))
-            triggersInRange.Add(trigger);
-    }
-
-    public void UnregisterTrigger(PickTrigger trigger)
-    {
-        if (triggersInRange.Contains(trigger))
-            triggersInRange.Remove(trigger);
-
-        if (trigger == currentTrigger)
-        {
-            currentTrigger = null;
-            ShowInteractKey(false);
-        }
-    }*/
-
 
     private void FindNearestTrigger()
     {

@@ -92,6 +92,8 @@
     <Compile Include="Assets\Scripts\UI\Inventory\PickManager.cs" />
     <Compile Include="Assets\Scripts\UI\SceneFader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\Dialog\MonologTriggerQuestion.cs" />
+    <Compile Include="Assets\Scripts\UI\FinalCheckTrigger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <Compile Include="Assets\Scripts\UI\IntroKeyTrigger.cs" />
@@ -121,6 +123,7 @@
     <Compile Include="Assets\Scripts\UI\Dialog\DialogLine.cs" />
     <Compile Include="Assets\Scripts\Character\RocketController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\UI\Question\QuestionAccessTrigger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\PickupItem.cs" />
@@ -148,6 +151,7 @@
     <Compile Include="Assets\Scripts\UI\Dialog\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\MonologTrigger.cs" />
+    <Compile Include="Assets\Scripts\UI\InteractionUIQuestion.cs" />
     <Compile Include="Assets\Scripts\UI\Audio\AudioManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\UI\Audio\UIButtonSound.cs" />

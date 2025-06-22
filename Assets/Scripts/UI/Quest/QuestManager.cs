@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
 
     public List<Quest> activeQuests = new List<Quest>();
     public QuestLogUI questLogUI;
+    //public GameObject countdown;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class QuestManager : MonoBehaviour
 
         activeQuests.Add(newQuest);
         questLogUI.AddQuest(newQuest);
+        //countdown.AddQuest(newQuest);
     }
 
     public void OnInfoCollected(string categoryID)
@@ -54,6 +56,7 @@ public class QuestManager : MonoBehaviour
                 else
                 {
                     questLogUI.UpdateQuestUI(quest);
+                    //countdown.UpdateQuestUI(quest);
                 }
             }
         }
@@ -66,6 +69,7 @@ public class QuestManager : MonoBehaviour
         {
             quest.isCompleted = true;
             questLogUI.UpdateQuestUI(quest);
+            //countdown.UpdateQuestUI(quest);
 
             if (quest.isTemporarySubQuest)
             {

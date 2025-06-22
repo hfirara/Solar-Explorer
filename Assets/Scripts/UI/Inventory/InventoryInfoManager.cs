@@ -9,7 +9,6 @@ public class InventoryInfoManager : MonoBehaviour
 {
     public static InventoryInfoManager Instance { get; private set; }
 
-    // Info dikategorikan berdasarkan categoryID (misal: "Merkurius", "Venus", dll)
     private Dictionary<string, List<InfoItem>> categorizedInfos = new Dictionary<string, List<InfoItem>>();
 
     [Header("UI References")]
@@ -19,19 +18,20 @@ public class InventoryInfoManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // penting untuk antar scene
     }
 
     public void AddInfo(InfoItem info)
     {
+        if (info == null || string.IsNullOrEmpty(info.categoryID)) return;
+
         if (!categorizedInfos.ContainsKey(info.categoryID))
         {
             categorizedInfos[info.categoryID] = new List<InfoItem>();
@@ -40,22 +40,16 @@ public class InventoryInfoManager : MonoBehaviour
         if (!categorizedInfos[info.categoryID].Contains(info))
         {
             categorizedInfos[info.categoryID].Add(info);
-            Debug.Log($"Info ditambahkan ke kategori {info.categoryID}: {info.name}");
+            Debug.Log($"[Inventory] Info ditambahkan ke kategori {info.categoryID}: {info.name}");
         }
-    }
-
-    public void OnCategoryButtonClicked(string categoryID)
-    {
-        ShowInfoByCategory(categoryID);
     }
 
     public bool HasInfo(InfoItem info)
     {
-        if (categorizedInfos.TryGetValue(info.categoryID, out List<InfoItem> list))
-        {
-            return list.Contains(info);
-        }
-        return false;
+        if (info == null || !categorizedInfos.TryGetValue(info.categoryID, out List<InfoItem> list))
+            return false;
+
+        return list.Contains(info);
     }
 
     public IEnumerable<InfoItem> GetAllInfo()
@@ -68,20 +62,18 @@ public class InventoryInfoManager : MonoBehaviour
         return allInfos;
     }
 
-    public void OpenPanel()
+    public List<InfoItem> GetInfoByCategory(string categoryID)
     {
-        panel.SetActive(true);
-        Time.timeScale = 0f;
-        ShowInfoByCategory("Merkurius"); // Ganti dengan default kamu
+        if (categorizedInfos.ContainsKey(categoryID))
+            return categorizedInfos[categoryID];
+        return new List<InfoItem>();
     }
 
-    public void ClosePanel()
+    public void OnCategoryButtonClicked(string categoryID)
     {
-        panel.SetActive(false);
-        Time.timeScale = 1f;
+        ShowInfoByCategory(categoryID);
     }
 
-    // Tampilkan kategori pertama secara default
     public void ShowInfoByCategory()
     {
         if (categorizedInfos.Count > 0)
@@ -94,14 +86,17 @@ public class InventoryInfoManager : MonoBehaviour
         }
     }
 
-    // Tampilkan info berdasarkan kategori tertentu
     public void ShowInfoByCategory(string categoryID)
     {
+        if (contentParent == null || infoItemPrefab == null) return;
+
+        // Bersihkan UI lama
         foreach (Transform child in contentParent)
         {
             Destroy(child.gameObject);
         }
 
+        // Tampilkan info berdasarkan kategori
         List<InfoItem> infoList = GetInfoByCategory(categoryID);
 
         foreach (InfoItem info in infoList)
@@ -116,11 +111,12 @@ public class InventoryInfoManager : MonoBehaviour
         }
     }
 
-    public List<InfoItem> GetInfoByCategory(string categoryID)
+    public int GetInfoCountByCategory(string categoryID)
     {
         if (categorizedInfos.ContainsKey(categoryID))
-            return categorizedInfos[categoryID];
-        return new List<InfoItem>();
+        {
+            return categorizedInfos[categoryID].Count;
+        }
+        return 0;
     }
-
 }
