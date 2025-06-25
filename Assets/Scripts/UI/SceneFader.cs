@@ -6,18 +6,31 @@ using System.Collections;
 public class SceneFader : MonoBehaviour
 {
     [SerializeField] private CanvasGroup fadeCanvasGroup;
-    [SerializeField] private float fadeDuration = 0.5f; // ← fade lebih cepat
+    [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private string sceneToLoad;
+
+    [Header("Requirement")]
+    [SerializeField] private string requiredCategory = "Venus";
+    [SerializeField] private int requiredInfoCount = 10;
+    [SerializeField] private QuestionSequenceManager sequenceManager;
 
     private void Start()
     {
-        // Saat scene dimulai, lakukan fade in
         StartCoroutine(FadeIn());
     }
 
     public void FadeAndLoadScene()
     {
-        StartCoroutine(FadeOutAndLoad());
+        int collected = InventoryInfoManager.Instance.GetInfoCountByCategory(requiredCategory);
+
+        if (collected >= requiredInfoCount && sequenceManager != null && sequenceManager.IsRunning)
+        {
+            StartCoroutine(FadeOutAndLoad());
+        }
+        else
+        {
+            Debug.Log($"[SceneFader] Belum memenuhi syarat. Info: {collected}/{requiredInfoCount}, Lulus Quiz: {sequenceManager?.IsRunning}");
+        }
     }
 
     private IEnumerator FadeOutAndLoad()
@@ -33,7 +46,7 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.1f); // sedikit jeda
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadScene(sceneToLoad);
     }
 
@@ -50,6 +63,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
 
-        fadeCanvasGroup.gameObject.SetActive(false); // opsional sembunyikan
+        fadeCanvasGroup.gameObject.SetActive(false);
     }
 }

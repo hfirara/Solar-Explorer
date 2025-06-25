@@ -7,8 +7,9 @@ using TMPro;
 public class QuestionAccessTrigger : MonoBehaviour
 {
     public GameObject interactionKeyUI;
+    public TMP_Text infoTextUI; // << tambahkan ini
     public QuestionSequenceManager sequenceManager;
-    public string requiredCategory = "Venus"; // Ganti sesuai kebutuhan
+    public string requiredCategory = "Venus";
     public int requiredCount = 10;
 
     private bool isPlayerInRange = false;
@@ -16,20 +17,30 @@ public class QuestionAccessTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !hasStarted)
+        if (isPlayerInRange)
         {
             int collected = InventoryInfoManager.Instance.GetInfoCountByCategory(requiredCategory);
 
-            if (collected >= requiredCount)
+            // Update UI teks setiap frame
+            if (infoTextUI != null)
             {
-                hasStarted = true;
-                sequenceManager.gameObject.SetActive(true);
-                sequenceManager.StartQuestionSequence(); // <- metode ini akan kamu buat di bawah
-                Time.timeScale = 0f; // opsional
+                infoTextUI.text = $"Info dikumpulkan: {collected}/{requiredCount}";
+                infoTextUI.color = (collected >= requiredCount) ? Color.green : Color.white;
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.E) && !hasStarted)
             {
-                Debug.Log($"Info {requiredCategory} baru {collected}/{requiredCount}");
+                if (collected >= requiredCount)
+                {
+                    hasStarted = true;
+                    sequenceManager.gameObject.SetActive(true);
+                    sequenceManager.StartQuestionSequence();
+                    Time.timeScale = 0f;
+                }
+                else
+                {
+                    Debug.Log($"Belum cukup info: {collected}/{requiredCount}");
+                }
             }
         }
     }
@@ -39,12 +50,12 @@ public class QuestionAccessTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            int collected = InventoryInfoManager.Instance.GetInfoCountByCategory(requiredCategory);
 
-            if (collected >= requiredCount)
-            {
+            if (interactionKeyUI != null)
                 interactionKeyUI.SetActive(true);
-            }
+
+            if (infoTextUI != null)
+                infoTextUI.gameObject.SetActive(true);
         }
     }
 
@@ -53,7 +64,12 @@ public class QuestionAccessTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            interactionKeyUI.SetActive(false);
+
+            if (interactionKeyUI != null)
+                interactionKeyUI.SetActive(false);
+
+            if (infoTextUI != null)
+                infoTextUI.gameObject.SetActive(false);
         }
     }
 }

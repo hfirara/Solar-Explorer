@@ -78,7 +78,7 @@ public class PlayerUI : MonoBehaviour
     #endregion
 
     #region Inventory
-    public void OpenInventory(string categoryID)
+    public void OpenInventory(string categoryID = "Merkurius") // default category
     {
         CloseAllUI();
         inventory.SetActive(true);
@@ -103,7 +103,6 @@ public class PlayerUI : MonoBehaviour
         Time.timeScale = 0f;
         isGamePaused = true;
     }
-
 
     public void ClosePanel()
     {
