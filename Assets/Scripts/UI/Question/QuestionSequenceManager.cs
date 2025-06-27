@@ -24,12 +24,15 @@ public class QuestionSequenceManager : MonoBehaviour
     public TMP_Text textScore;
     public Image[] stars;
 
+    [HideInInspector]
+    public bool hasPassedQuiz = false;
+
     private int currentQuestionIndex = 0;
     private int correctCount = 0;
     private bool isRunning = false;
 
-    public bool IsRunning => isRunning;
-    public int GetCorrectCount() => correctCount;
+    public int CorrectCount => correctCount;
+    public bool IsFinished => currentQuestionIndex >= allQuestions.Count;
 
     private void Awake()
     {
@@ -102,6 +105,8 @@ public class QuestionSequenceManager : MonoBehaviour
         {
             stars[i].enabled = i < starCount;
         }
+
+        hasPassedQuiz = correctCount >= 7;
     }
 
     private IEnumerator FadeOut()

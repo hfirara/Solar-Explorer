@@ -9,9 +9,7 @@ public class SceneFader : MonoBehaviour
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private string sceneToLoad;
 
-    [Header("Requirement")]
-    [SerializeField] private string requiredCategory = "Venus";
-    [SerializeField] private int requiredInfoCount = 10;
+    [Header("Quiz Reference")]
     [SerializeField] private QuestionSequenceManager sequenceManager;
 
     private void Start()
@@ -21,17 +19,17 @@ public class SceneFader : MonoBehaviour
 
     public void FadeAndLoadScene()
     {
-        int collected = InventoryInfoManager.Instance.GetInfoCountByCategory(requiredCategory);
-
-        if (collected >= requiredInfoCount && sequenceManager != null && sequenceManager.IsRunning)
+        // Cek score minimal 7
+        if (sequenceManager != null && sequenceManager.CorrectCount >= 7)
         {
             StartCoroutine(FadeOutAndLoad());
         }
         else
         {
-            Debug.Log($"[SceneFader] Belum memenuhi syarat. Info: {collected}/{requiredInfoCount}, Lulus Quiz: {sequenceManager?.IsRunning}");
+            Debug.Log("[SceneFader] Belum memenuhi syarat: score belum ≥ 7");
         }
     }
+
 
     private IEnumerator FadeOutAndLoad()
     {

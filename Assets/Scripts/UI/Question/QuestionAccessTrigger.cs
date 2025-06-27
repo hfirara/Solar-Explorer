@@ -28,14 +28,20 @@ public class QuestionAccessTrigger : MonoBehaviour
                 infoTextUI.color = (collected >= requiredCount) ? Color.green : Color.white;
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && !hasStarted)
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (collected >= requiredCount)
                 {
-                    hasStarted = true;
-                    sequenceManager.gameObject.SetActive(true);
-                    sequenceManager.StartQuestionSequence();
-                    Time.timeScale = 0f;
+                    if (sequenceManager != null && !sequenceManager.hasPassedQuiz)
+                    {
+                        sequenceManager.gameObject.SetActive(true);
+                        sequenceManager.StartQuestionSequence();
+                        Time.timeScale = 0f;
+                    }
+                    else
+                    {
+                        Debug.Log("Kamu sudah lulus quiz. Tidak perlu ulangi lagi.");
+                    }
                 }
                 else
                 {
