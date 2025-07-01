@@ -51,12 +51,25 @@ public class QuestionManager : MonoBehaviour
             answerButtons[i].interactable = false;
 
             if (i == correctIndex)
+            {
                 answerButtons[i].image.color = correctColor;
+            }
             else if (i == selectedIndex)
+            {
                 answerButtons[i].image.color = wrongColor;
+            }
         }
 
-        // Tunggu 2–3 detik
+        // 🔊 Play audio di luar loop, agar tidak double
+        if (isCorrect)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.correctAnswerClip);
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.wrongAnswerClip);
+        }
+
         yield return new WaitForSecondsRealtime(1.5f);
 
         // Reset tombol
@@ -71,6 +84,7 @@ public class QuestionManager : MonoBehaviour
 
         onAnswerResult?.Invoke(isCorrect);
     }
+
 
     public void AnswerQuestion(bool isCorrect)
     {

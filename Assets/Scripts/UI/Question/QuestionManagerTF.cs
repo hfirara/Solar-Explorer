@@ -54,15 +54,25 @@ public class QuestionManagerTF : MonoBehaviour
     {
         bool isCorrect = selectedIndex == correctIndex;
 
-        // Warna tombol
+        // Play audio hanya sekali
+        if (isCorrect)
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.correctAnswerClip);
+        else
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.wrongAnswerClip);
+
+        // Update warna tombol
         for (int i = 0; i < answerButtons.Length; i++)
         {
             answerButtons[i].interactable = false;
 
             if (i == correctIndex)
+            {
                 answerButtons[i].image.color = correctColor;
+            }
             else if (i == selectedIndex)
+            {
                 answerButtons[i].image.color = wrongColor;
+            }
         }
 
         yield return new WaitForSecondsRealtime(1.5f);

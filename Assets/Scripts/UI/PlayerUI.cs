@@ -14,11 +14,11 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private GameObject inventory;
 
     [Header("Inventory")]
-    public GameObject inventoryPanel;
     public Transform infoContainer; // tempat prefab info di-spawn
     public GameObject infoItemPrefab;
-    
-    public GameObject gameOverPanel;
+
+    [Header("Game Over")]
+    [SerializeField] private GameObject gameOverPanel;
 
     private bool isGamePaused = false;
 
@@ -30,13 +30,20 @@ public class PlayerUI : MonoBehaviour
 
     public void ShowGameOverPanel()
     {
-        gameOverPanel.SetActive(true);
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+    }
+
+    public void HideGameOverPanel()
+    {
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
     }
 
     #region Pause Game
     public void PauseGame()
     {
-        CloseAllUI(); // pastikan UI lain ditutup
+        CloseAllUI();
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
@@ -53,7 +60,7 @@ public class PlayerUI : MonoBehaviour
     #region Quest Log
     public void OpenQuestLog()
     {
-        CloseAllUI(); // pastikan UI lain ditutup
+        CloseAllUI();
         questLogUI.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
@@ -68,7 +75,6 @@ public class PlayerUI : MonoBehaviour
     #endregion
 
     #region Pick UI
-
     public void ClosePick()
     {
         pickUI.SetActive(false);
@@ -78,7 +84,7 @@ public class PlayerUI : MonoBehaviour
     #endregion
 
     #region Inventory
-    public void OpenInventory(string categoryID = "Merkurius") // default category
+    public void OpenInventory(string categoryID = "Merkurius")
     {
         CloseAllUI();
         inventory.SetActive(true);
@@ -104,26 +110,24 @@ public class PlayerUI : MonoBehaviour
         isGamePaused = true;
     }
 
-    public void ClosePanel()
+    public void CloseInventory()
     {
         inventory.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
     }
-
-
     #endregion
 
-    // Optional: Tutup semua UI sebelum buka salah satu
     private void CloseAllUI()
     {
         pauseMenu.SetActive(false);
         questLogUI.SetActive(false);
         pickUI.SetActive(false);
         inventory.SetActive(false);
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
     }
 
-    // Untuk pengecekan eksternal (misal: Player.cs ingin tahu status pause)
     public bool IsGamePaused()
     {
         return isGamePaused;

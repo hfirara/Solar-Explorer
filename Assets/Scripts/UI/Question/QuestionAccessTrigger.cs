@@ -34,6 +34,7 @@ public class QuestionAccessTrigger : MonoBehaviour
                 {
                     if (sequenceManager != null && !sequenceManager.hasPassedQuiz)
                     {
+                        AudioManager.Instance.PlaySFX(AudioManager.Instance.pickupInfoClip);
                         sequenceManager.gameObject.SetActive(true);
                         sequenceManager.StartQuestionSequence();
                         Time.timeScale = 0f;

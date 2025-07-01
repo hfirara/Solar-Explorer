@@ -41,6 +41,7 @@ public class PickTrigger : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E) && !PickManager.Instance.IsDataRunning)
         {
             PickManager.Instance.StartData(infoItem, this);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.pickupInfoClip);
         }
     }
 }

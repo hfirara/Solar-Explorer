@@ -370,6 +370,9 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   questLogUI: {fileID: 0}
   pickUI: {fileID: 0}
+  inventory: {fileID: 0}
+  infoContainer: {fileID: 0}
+  infoItemPrefab: {fileID: 0}
   gameOverPanel: {fileID: 0}
 --- !u!114 &7121166025730572882
 MonoBehaviour:
@@ -501,6 +504,7 @@ MonoBehaviour:
   panelResult: {fileID: 0}
   textScore: {fileID: 0}
   stars: []
+  hasPassedQuiz: 0
 --- !u!1 &4650420028050796878
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1065bb21e1dc33346847a44c3951ae81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
 --- !u!1 &4678111692456319695
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,9 +611,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 6754816905692700245}
   SFXSource: {fileID: 2017735571506065921}
-  background: {fileID: 0}
-  buttonClick: {fileID: 0}
-  death: {fileID: 0}
+  background: {fileID: 8300000, guid: 6c4e2aee26597df41b6a2b724759ae91, type: 3}
+  buttonClick: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
+  death: {fileID: 8300000, guid: f245baedc00782047b8812f9557b5bd1, type: 3}
+  damage: {fileID: 0}
+  run: {fileID: 8300000, guid: b6b57e5e3a341bc49a281bcf48e9b9e4, type: 3}
+  pickupInfoClip: {fileID: 8300000, guid: f9e13d788b30f3c4d84fb8bc10be86f2, type: 3}
+  correctAnswerClip: {fileID: 8300000, guid: c755c682e06e59b4881d88e864ab21ee, type: 3}
+  wrongAnswerClip: {fileID: 8300000, guid: cfb06011de53d724fb9206d3472322ac, type: 3}
 --- !u!1 &6674194535740898880
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +891,7 @@ MonoBehaviour:
   fadeCanvasGroup: {fileID: 0}
   fadeDuration: 1
   sceneToLoad: 
+  sequenceManager: {fileID: 0}
 --- !u!1 &9073489384348994954
 GameObject:
   m_ObjectHideFlags: 0

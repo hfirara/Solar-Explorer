@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-     public static GameManager Instance;
+    public static GameManager Instance;
 
-    [Header("UI Game Over")]
-    [SerializeField] private GameObject gameOverPanel;
+    private bool isGameOver = false;
 
     private void Awake()
     {
@@ -15,18 +14,33 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Update()
+    {
+        if (isGameOver && Input.GetKeyDown(KeyCode.Space))
+        {
+            RespawnPlayer();
+        }
+    }
+
     public void GameOver()
     {
         Debug.Log("Game Over!");
-        Time.timeScale = 0f; // stop gameplay
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.death);
+        Player.Instance.playerUI.ShowGameOverPanel();
+        isGameOver = true;
     }
 
-    public void RestartGame()
+    public void RespawnPlayer()
     {
+        Debug.Log("Respawn Player");
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+
+        // Panggil Respawn() yang sudah pakai currentSafePoint
+        Player.Instance.Respawn();
+
+        Player.Instance.playerUI.HideGameOverPanel();
+        isGameOver = false;
     }
 }

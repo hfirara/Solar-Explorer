@@ -19,6 +19,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip buttonClick;
     public AudioClip death;
+    public AudioClip jump;
+    public AudioClip run;
+    public AudioClip pickupInfoClip;
+    public AudioClip correctAnswerClip;
+    public AudioClip wrongAnswerClip;
 
     private void Awake()
     {
@@ -50,8 +55,16 @@ public class AudioManager : MonoBehaviour
 */
     public void PlaySFX(AudioClip clip)
     {
+        if (clip == null)
+        {
+            Debug.LogWarning("SFX clip is null!");
+            return;
+        }
+
         SFXSource.PlayOneShot(clip);
+        Debug.Log("SFX playing: " + clip.name);
     }
+
 /*
     public void SetMusicVolume(float volume)
     {

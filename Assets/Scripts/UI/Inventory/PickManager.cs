@@ -88,6 +88,7 @@ public class PickManager : MonoBehaviour
         if (isDataRunning) return;
 
         UIManagerData.Instance.SetDataActive(true);
+        //AudioManager.Instance.PlaySFX(AudioManager.Instance.pickupInfoClip);
 
         currentData = data.dataLines;
         currentIndex = 0;
