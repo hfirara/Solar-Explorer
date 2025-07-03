@@ -8,18 +8,11 @@ public class QuestManager : MonoBehaviour
 
     public List<Quest> activeQuests = new List<Quest>();
     public QuestLogUI questLogUI;
-    //public GameObject countdown;
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-    }
-
-    private void Start()
-    {
-        // Tambah quest utama
-        // Ini bisa juga lewat NPC nanti
     }
 
     public void AddQuest(QuestData data, bool isTemporary = false)
@@ -33,12 +26,13 @@ public class QuestManager : MonoBehaviour
 
             targetInfoCategoryID = data.targetInfoCategoryID,
             targetAmount = data.targetAmount,
-            currentAmount = 0
+            currentAmount = 0,
+
+            targetNpcID = data.targetNpcID // support NPC
         };
 
         activeQuests.Add(newQuest);
         questLogUI.AddQuest(newQuest);
-        //countdown.AddQuest(newQuest);
     }
 
     public void OnInfoCollected(string categoryID)
@@ -56,7 +50,26 @@ public class QuestManager : MonoBehaviour
                 else
                 {
                     questLogUI.UpdateQuestUI(quest);
-                    //countdown.UpdateQuestUI(quest);
+                }
+            }
+        }
+    }
+
+    public void OnTalkedToNPC(string npcID)
+    {
+        foreach (Quest quest in activeQuests)
+        {
+            if (!quest.isCompleted && quest.targetNpcID == npcID)
+            {
+                quest.currentAmount++;
+
+                if (quest.currentAmount >= quest.targetAmount)
+                {
+                    CompleteQuest(quest.questTitle);
+                }
+                else
+                {
+                    questLogUI.UpdateQuestUI(quest);
                 }
             }
         }
@@ -69,7 +82,6 @@ public class QuestManager : MonoBehaviour
         {
             quest.isCompleted = true;
             questLogUI.UpdateQuestUI(quest);
-            //countdown.UpdateQuestUI(quest);
 
             if (quest.isTemporarySubQuest)
             {

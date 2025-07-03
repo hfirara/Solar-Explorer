@@ -5,37 +5,28 @@ using System.Collections;
 
 public class LayerFader : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup fadeCanvasGroup; // objek hitam yang di-fade
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] private float fadeDuration = 1f;
-    [SerializeField] private GameObject nextPanel; // panel yang akan dimunculkan setelah fade
+    [SerializeField] private string sceneToLoad;
 
-    public void StartFadeToPanel()
+    private void Awake()
     {
-        StartCoroutine(FadeOutThenShowPanel());
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.alpha = 1f; // Awalnya full hitam
+            fadeCanvasGroup.gameObject.SetActive(true);
+        }
     }
 
-    private IEnumerator FadeOutThenShowPanel()
+    private void Start()
     {
-        // Fade out
-        float time = 0f;
-        while (time < fadeDuration)
-        {
-            time += Time.deltaTime;
-            fadeCanvasGroup.alpha = Mathf.Clamp01(time / fadeDuration);
-            yield return null;
-        }
-
-        // Setelah layar hitam penuh, munculkan panel
-        if (nextPanel != null)
-            nextPanel.SetActive(true);
-
-        // (Opsional) Fade in kembali
         StartCoroutine(FadeIn());
     }
 
     private IEnumerator FadeIn()
     {
         float time = 0f;
+
         while (time < fadeDuration)
         {
             time += Time.deltaTime;
@@ -44,5 +35,29 @@ public class LayerFader : MonoBehaviour
         }
 
         fadeCanvasGroup.alpha = 0f;
+        fadeCanvasGroup.gameObject.SetActive(false);
+    }
+
+    public void FadeAndLoadScene()
+    {
+        StartCoroutine(FadeOutAndLoad());
+    }
+
+    private IEnumerator FadeOutAndLoad()
+    {
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.gameObject.SetActive(true);
+        }
+
+        float time = 0f;
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Clamp01(time / fadeDuration);
+            yield return null;
+        }
+
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

@@ -14,12 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 1 (Mercury).unity
     guid: 99cbf088443705e4a9e3a4acceef2886
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1.1 (Quiz).unity
     guid: 868229401542af84ea72da598f021a03
   - enabled: 1
     path: Assets/Scenes/Level 2 (Venus).unity
-    guid: 4117f6ce7508cfa4485d2caa76c250ea
+    guid: fab4f913462207f42afeeae6879f7573
   - enabled: 1
     path: Assets/Scenes/Level 8 (Neptune).unity
     guid: 4a45fbd6ea888664093375ec883c6eb0

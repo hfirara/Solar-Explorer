@@ -121,7 +121,9 @@ public class DialogManager : MonoBehaviour
         currentDialog = null;
         currentIndex = 0;
 
-        UIManager.Instance.SetDialogActive(false); // << Tambahkan ini
+        UINotification.Instance.ShowNotification("Quest baru ditambahkan!");
+
+        //UIManager.Instance.SetDialogActive(false); // << Tambahkan ini
     }
 
     public void ShowInteractKey(bool show, Vector3? position = null)

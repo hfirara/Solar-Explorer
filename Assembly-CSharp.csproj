@@ -80,7 +80,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\UI\Question\QuestionManager.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\DialogManager.cs" />
-    <Compile Include="Assets\Scripts\UI\Dialog\NPCInteraction.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\EnemyDestroyZone.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Assets\Scripts\UI\UIManagerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scripts\UI\UINotification.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\CategoryButton.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\PickManager.cs" />
@@ -96,7 +96,6 @@
     <Compile Include="Assets\Scripts\UI\Dialog\MonologTriggerQuestion.cs" />
     <Compile Include="Assets\Scripts\UI\FinalCheckTrigger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-    <Compile Include="Assets\Scripts\PlayerMov.cs" />
     <Compile Include="Assets\Scripts\UI\IntroKeyTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Inventory\InfoDisplayUI.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\Quest.cs" />
@@ -112,7 +111,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\UI\Question\TriggerZoneSoalTF.cs" />
     <Compile Include="Assets\Scripts\UI\Dialog\NPCDialogTrigger.cs" />
-    <Compile Include="Assets\Scripts\UI\Quest\SubQuest.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuManager.cs" />
     <Compile Include="Assets\Scripts\UI\Question\MoveToLeft.cs" />
     <Compile Include="Assets\Scripts\UI\Quest\QuestData.cs" />
     <Compile Include="Assets\Scripts\UI\Question\QuestionSequenceManager.cs" />
@@ -127,7 +126,6 @@
     <Compile Include="Assets\Scripts\UI\Question\QuestionAccessTrigger.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
-    <Compile Include="Assets\Scripts\UI\Inventory\PickupItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
@@ -160,6 +158,7 @@
     <Compile Include="Assets\Scripts\UI\Quest\QuestLogUI.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\20 Logos PSD\Fonts\chunkfiveex\SIL Open Font License 1.1.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -173,15 +172,20 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\20 Logos PSD\Fonts\kaushanscript\SIL Open Font License.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\20 Logos PSD\Fonts\peacesans\FREE FONT LICENSE.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\20 Logos PSD\Fonts\molot\molot-eula.txt" />
+    <None Include="Assets\20 Logos PSD\Fonts\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\20 Logos PSD\Fonts\firasansheavy\SIL Open Font License.txt" />
     <None Include="Assets\Assets\UI\Space_Game_GUI_PNG\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

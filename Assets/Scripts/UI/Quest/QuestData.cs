@@ -9,5 +9,6 @@ public class QuestData : ScriptableObject
     [TextArea] public string questDescription;
 
     public string targetInfoCategoryID; // contoh: "planet_bumi"
+    public string targetNpcID;
     public int targetAmount;        // contoh: 10 info
 }

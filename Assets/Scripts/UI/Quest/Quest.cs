@@ -10,6 +10,7 @@ public class Quest
     public bool isTemporarySubQuest;
 
     public string targetInfoCategoryID; // misal "planet_bumi"
+    public string targetNpcID;
     public int targetAmount;
     public int currentAmount;
 }

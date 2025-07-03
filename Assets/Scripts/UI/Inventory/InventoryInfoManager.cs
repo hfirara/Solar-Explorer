@@ -41,6 +41,7 @@ public class InventoryInfoManager : MonoBehaviour
         {
             categorizedInfos[info.categoryID].Add(info);
             Debug.Log($"[Inventory] Info ditambahkan ke kategori {info.categoryID}: {info.name}");
+            UINotification.Instance.ShowNotification("Info baru ditambahkan!");
         }
     }
 
