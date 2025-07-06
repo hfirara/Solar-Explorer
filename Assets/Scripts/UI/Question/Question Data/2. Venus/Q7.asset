@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
-  m_Name: Q6
+  m_Name: Q7
   m_EditorClassIdentifier: 
-  questionText: Venus memiliki satelit alami seperti bulan yang dimiliki Bumi.
+  questionText: Venus berotasi dengan arah yang...
   answers:
-  - Benar
-  - Salah
+  - Sama dengan planet lain (dari barat ke timur)
+  - Berlawanan dengan planet lain (dari timur ke barat)
+  - Tidak berotasi sama sekali
+  - Rotasi sangat cepat
   correctAnswerIndex: 1
