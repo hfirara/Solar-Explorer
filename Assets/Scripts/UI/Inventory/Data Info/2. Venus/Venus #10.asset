@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
-  m_Name: Q4
+  m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
+  m_Name: Venus #10
   m_EditorClassIdentifier: 
-  questionText: Venus memiliki awan yang mengandung tetesan asam sulfat pekat.
-  answers:
-  - Benar
-  - Salah
-  correctAnswerIndex: 0
+  categoryID: Venus
+  dataLines:
+  - description: Tahun Venus (periode revolusi mengelilingi Matahari) adalah 225
+      hari Bumi.
