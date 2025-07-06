@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: 3
+  - description: Gravitasi di Merkurius sekitar 0,38 kali gravitasi Bumi.

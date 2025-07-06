@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: Merkurius planet terdekat dengan matahari
+  - description: Merkurius adalah planet terdekat dari Matahari.

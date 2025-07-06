@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -30,5 +31,11 @@ public class UIManager : MonoBehaviour
     public bool IsDialogActive()
     {
         return isDialogActive;
+    }
+
+    public void PlayGame()
+    {
+        // Ganti "NamaScene" dengan nama scene yang ingin kamu tuju
+        SceneManager.LoadScene("Menu");
     }
 }

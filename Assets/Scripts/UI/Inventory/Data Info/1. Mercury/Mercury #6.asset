@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: 4
+  - description: Atmosfernya sangat tipis dan didominasi oleh gas helium, sehingga
+      tidak mampu menahan panas.

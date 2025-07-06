@@ -7,7 +7,7 @@ using System;
 
 public class DialogManager : MonoBehaviour
 {
-   public static DialogManager Instance;
+    public static DialogManager Instance;
 
     [Header("UI References")]
     [SerializeField] private GameObject dialogPanel;
@@ -22,14 +22,14 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private Transform playerTransform;
 
     private NPCDialogTrigger currentTrigger;
-    private readonly List<DialogLine> triggersInRange = new List<DialogLine>();
     private List<DialogLine> currentDialog;
-    private string currentSpeaker;
     private int currentIndex = 0;
 
     private bool isDialogRunning = false;
     public bool IsDialogRunning => isDialogRunning;
     public bool IsDialogActive => dialogPanel.activeSelf;
+
+    private Action onDialogComplete;
 
     private void Awake()
     {
@@ -86,12 +86,12 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    public void StartDialog(DialogData data)
+    public void StartDialog(DialogData data, Action onComplete = null)
     {
         if (data == null || data.dialogLines == null || data.dialogLines.Count == 0)
             return;
-
-        UIManager.Instance.SetDialogActive(true); // << Tambahkan ini
+        
+        UIManager.Instance.SetDialogActive(true);
 
         currentDialog = data.dialogLines;
         currentIndex = 0;
@@ -99,6 +99,11 @@ public class DialogManager : MonoBehaviour
         dialogPanel.SetActive(true);
         speakerNameText.text = currentDialog[currentIndex].speakerName;
         dialogText.text = currentDialog[currentIndex].line;
+
+        isDialogRunning = true;
+        onDialogComplete = onComplete;
+
+        ShowInteractKey(false);
     }
 
     private void NextLine()
@@ -117,20 +122,25 @@ public class DialogManager : MonoBehaviour
 
     private void EndDialog()
     {
+        UIManager.Instance.SetDialogActive(false);
         dialogPanel.SetActive(false);
         currentDialog = null;
         currentIndex = 0;
+        isDialogRunning = false;
 
-        UINotification.Instance.ShowNotification("Quest baru ditambahkan!");
-
-        //UIManager.Instance.SetDialogActive(false); // << Tambahkan ini
+        // Panggil callback kalau ada
+        if (onDialogComplete != null)
+        {
+            onDialogComplete.Invoke();
+            onDialogComplete = null;
+        }
     }
 
     public void ShowInteractKey(bool show, Vector3? position = null)
     {
         if (interactionKeyUI == null) return;
 
-        if (position.HasValue)
+        if (show && position.HasValue)
             interactionKeyUI.Show("E", position.Value);
         else
             interactionKeyUI.Hide();

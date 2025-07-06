@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: 7
+  - description: Planet ini tidak memiliki satelit.

@@ -19,7 +19,10 @@ EditorBuildSettings:
     guid: 868229401542af84ea72da598f021a03
   - enabled: 1
     path: Assets/Scenes/Level 2 (Venus).unity
-    guid: fab4f913462207f42afeeae6879f7573
+    guid: 8e8f5f47446fd6643ad921201c7a72a5
+  - enabled: 1
+    path: Assets/Scenes/Level 3 (Earth).unity
+    guid: 64dd635ac3daa904a8895d48b2bce70b
   - enabled: 1
     path: Assets/Scenes/Level 8 (Neptune).unity
     guid: 4a45fbd6ea888664093375ec883c6eb0

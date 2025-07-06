@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: 6
+  - description: Butuh 59 hari Bumi untuk satu kali rotasi, tapi hanya 88 hari untuk
+      satu revolusi.

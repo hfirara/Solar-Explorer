@@ -9,14 +9,13 @@ public class NPCDialogTrigger : MonoBehaviour
     public QuestData QuestToAdd;
 
     private bool playerInRange = false;
-    private bool dialogStarted = false; // supaya tidak double trigger
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            DialogManager.Instance.ShowInteractKey(true);
+            DialogManager.Instance.ShowInteractKey(true, transform.position);
         }
     }
 
@@ -31,48 +30,30 @@ public class NPCDialogTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !dialogStarted)
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            bool isCorrectNPC = QuestManager.Instance.activeQuests.Exists(q => !q.isCompleted && q.targetNpcID == npcID);
-
-            if (isCorrectNPC)
+            if (QuestManager.Instance.activeQuests.Exists(q => !q.isCompleted && q.targetNpcID == npcID))
             {
                 AudioManager.Instance.PlaySFX(AudioManager.Instance.pickupInfoClip);
 
-                // Hitung quest
-                QuestManager.Instance.OnTalkedToNPC(npcID);
+                // Jalankan dialog + callback
+                DialogManager.Instance.StartDialog(dialogData, () =>
+                {
+                    // Callback setelah dialog selesai
+                    QuestManager.Instance.OnTalkedToNPC(npcID);
 
-                // Mulai coroutine handle dialog + quest
-                StartCoroutine(HandleDialogThenQuest());
-                dialogStarted = true;
+                    if (QuestToAdd != null)
+                    {
+                        QuestManager.Instance.AddQuest(QuestToAdd);
+                        UINotification.Instance.ShowNotification("Quest baru ditambahkan!");
+                    }
+                });
             }
             else
             {
-                UINotification.Instance.ShowNotification("NPC ini bukan target quest saat ini!");
                 Debug.Log("NPC ini bukan target quest saat ini!");
+                UINotification.Instance.ShowNotification("NPC ini bukan target quest saat ini!");
             }
         }
-    }
-
-    private IEnumerator HandleDialogThenQuest()
-    {
-        // Mulai dialog
-        DialogManager.Instance.StartDialog(dialogData);
-
-        // Tunggu sampai dialog selesai
-        while (DialogManager.Instance.IsDialogRunning)
-        {
-            yield return null;
-        }
-
-        // Tambah quest baru jika ada
-        if (QuestToAdd != null)
-        {
-            QuestManager.Instance.AddQuest(QuestToAdd);
-            Debug.Log($"Quest baru '{QuestToAdd.questTitle}' ditambahkan setelah dialog.");
-        }
-
-        // Opsional: disable trigger supaya tidak bisa diulang
-        //gameObject.SetActive(false);
     }
 }

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Merkurius
   dataLines:
-  - description: Planet terkecil
+  - description: Dinamai sesuai nama dewa Romawi "Mercury" karena pergerakannya yang
+      cepat

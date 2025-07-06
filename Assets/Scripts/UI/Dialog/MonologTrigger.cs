@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonologTrigger : MonoBehaviour
 {
     public DialogData monologData;
-    public QuestData subQuestToAdd;
+    public QuestData QuestToAdd;
 
     private bool triggered = false;
 
@@ -22,6 +22,7 @@ public class MonologTrigger : MonoBehaviour
 
     private IEnumerator HandleMonologThenQuest()
     {
+        // Mulai dialog
         DialogManager.Instance.StartDialog(monologData);
 
         // Tunggu sampai dialog selesai
@@ -30,12 +31,16 @@ public class MonologTrigger : MonoBehaviour
             yield return null;
         }
 
-        // Tambahkan quest setelah dialog selesai
-        if (subQuestToAdd != null)
+        // Tambahkan quest
+        if (QuestToAdd != null)
         {
-            QuestManager.Instance.AddQuest(subQuestToAdd);
+            QuestManager.Instance.AddQuest(QuestToAdd);
+
+            // Munculkan notif
+            UINotification.Instance.ShowNotification("Quest baru ditambahkan!");
         }
 
-        gameObject.SetActive(false); // opsional
+        // Opsional: Nonaktifkan trigger
+        gameObject.SetActive(false);
     }
 }
