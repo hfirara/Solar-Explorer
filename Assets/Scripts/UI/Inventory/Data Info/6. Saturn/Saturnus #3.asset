@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
-  m_Name: Neptunus #1
+  m_Name: Saturnus #3
   m_EditorClassIdentifier: 
-  categoryID: Neptunus
+  categoryID: Saturnus
   dataLines:
-  - description: Neptunus adalah planet terjauh dari Matahari, dengan jarak sekitar
-      30 kali jarak Matahari ke Bumi.
+  - description: Berotasi menyamping, sehingga disebut Planet Samping.

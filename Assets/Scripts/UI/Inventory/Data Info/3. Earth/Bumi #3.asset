@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
-  m_Name: Bumi #1 2
+  m_Name: Bumi #3
   m_EditorClassIdentifier: 
-  categoryID: 
-  dataLines: []
+  categoryID: Bumi
+  dataLines:
+  - description: Selain nitrogen dan oksigen, atmosfer Bumi juga mengandung karbon
+      dioksida, argon, dan uap air.

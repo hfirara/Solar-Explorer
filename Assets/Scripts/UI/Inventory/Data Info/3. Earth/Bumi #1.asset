@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d84d45b665ed674897389c736b6a574, type: 3}
   m_Name: Bumi #1
   m_EditorClassIdentifier: 
-  categoryID: 
-  dataLines: []
+  categoryID: Bumi
+  dataLines:
+  - description: Bumi adalah planet ketiga dari Matahari di Tata Surya.
