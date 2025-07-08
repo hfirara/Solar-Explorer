@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,7 +19,18 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver && Input.GetKeyDown(KeyCode.Space))
         {
-            RespawnPlayer();
+            string currentScene = SceneManager.GetActiveScene().name;
+
+            if (currentScene == "Level 9 (Going Home)")
+            {
+                // Kalau scene = Level9, restart scene
+                RestartScene();
+            }
+            else
+            {
+                // Kalau scene lain, respawn
+                RespawnPlayer();
+            }
         }
     }
 
@@ -41,6 +53,15 @@ public class GameManager : MonoBehaviour
         Player.Instance.Respawn();
 
         Player.Instance.playerUI.HideGameOverPanel();
+        isGameOver = false;
+    }
+
+    private void RestartScene()
+    {
+        Debug.Log("Restart Scene");
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         isGameOver = false;
     }
 }

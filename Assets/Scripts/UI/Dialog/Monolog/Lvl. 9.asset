@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 9
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: "Semua planet sudah kulalui\u2026"
+  - speakerName: Astro
+    line: Setiap tempat punya rahasia dan keunikan sendiri.
+  - speakerName: Astro
+    line: "Sekarang aku kembali\u2026 membawa semua fakta."
+  - speakerName: Astro
+    line: 'Pertanyaannya tinggal satu: Apakah ada tempat yang bisa jadi rumah baru?'

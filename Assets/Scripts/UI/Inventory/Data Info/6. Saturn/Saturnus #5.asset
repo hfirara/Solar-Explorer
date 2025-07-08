@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Saturnus
   dataLines:
-  - description: Uranus memiliki 27 satelit.
+  - description: Atmosfer Saturnus sangat tebal, terutama terdiri dari hidrogen dan
+      helium.

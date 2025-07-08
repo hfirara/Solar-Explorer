@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Saturnus
   dataLines:
-  - description: Memiliki 13 cincin dengan gradasi warna dari gelap di bagian dalam.
+  - description: Diameter Saturnus sekitar 120.536 km, setara dengan 9,45 kali diameter
+      Bumi.

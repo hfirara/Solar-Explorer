@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5393587128070200873, guid: 4f2a417bffde37141b2204ce4d85ee72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5393587128070200873, guid: 4f2a417bffde37141b2204ce4d85ee72, type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,6 +296,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5393587128070200873, guid: 4f2a417bffde37141b2204ce4d85ee72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174260055857383952, guid: 4f2a417bffde37141b2204ce4d85ee72, type: 3}
+      propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1085,7 +1089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7245839815067658180, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7909234702126417199, guid: 5c371b46ff32b154894039240cc9612d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2982,7 +2986,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.076431, y: 1.21115, z: -10}
+  m_LocalPosition: {x: 4.0769467, y: 1.46741, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3580,7 +3584,7 @@ Transform:
   m_GameObject: {fileID: 762360084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.5, y: -0.63, z: 0}
+  m_LocalPosition: {x: 26.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7292,11 +7296,11 @@ PrefabInstance:
     - target: {fileID: 2611625042573211189, guid: d2f9bea38867dda499ff19db77811648, type: 3}
       propertyPath: stars.Array.data[0]
       value: 
-      objectReference: {fileID: 369090310}
+      objectReference: {fileID: 369090309}
     - target: {fileID: 2611625042573211189, guid: d2f9bea38867dda499ff19db77811648, type: 3}
       propertyPath: stars.Array.data[1]
       value: 
-      objectReference: {fileID: 369090309}
+      objectReference: {fileID: 369090310}
     - target: {fileID: 2611625042573211189, guid: d2f9bea38867dda499ff19db77811648, type: 3}
       propertyPath: stars.Array.data[2]
       value: 

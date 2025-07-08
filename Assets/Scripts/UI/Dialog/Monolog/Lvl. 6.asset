@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 6
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: Saturnus... planet bercincin yang selalu bikin takjub.
+  - speakerName: Astro
+    line: Aku belum pernah lihat sesuatu yang seindah ini.
+  - speakerName: Astro
+    line: Tapi di balik keindahan, tetap ada misi. Aku harus fokus.

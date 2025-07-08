@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 7
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: "Biru pucat\u2026 dingin menusuk tulang."
+  - speakerName: Astro
+    line: "Suasananya sepi banget\u2026 seperti dunia yang menunggu untuk ditemukan."
+  - speakerName: Astro
+    line: Aku nggak akan lewatkan kesempatan ini.

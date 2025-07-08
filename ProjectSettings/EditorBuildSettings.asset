@@ -24,6 +24,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 3 (Earth).unity
     guid: 64dd635ac3daa904a8895d48b2bce70b
   - enabled: 1
+    path: Assets/Scenes/Level 4 (Mars).unity
+    guid: 22a8c356165d0844196858e76dc9b2fc
+  - enabled: 1
+    path: Assets/Scenes/Level 5 (Jupiter).unity
+    guid: f49814a57ad46fb48a52739b961ebbc0
+  - enabled: 1
+    path: Assets/Scenes/Level 6 (Saturn).unity
+    guid: 69cb33d7037301e44a03005001e61b35
+  - enabled: 1
+    path: Assets/Scenes/Level 7 (Uranus).unity
+    guid: fd3ca11918226d548946a1031cdf6ffc
+  - enabled: 1
     path: Assets/Scenes/Level 8 (Neptune).unity
     guid: 4a45fbd6ea888664093375ec883c6eb0
   - enabled: 1

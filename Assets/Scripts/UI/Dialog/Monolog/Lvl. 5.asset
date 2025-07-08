@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 5
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: Planet terbesar... dan atmosfernya benar-benar ganas.
+  - speakerName: Astro
+    line: Harus hati-hati... satu kesalahan kecil, bisa habis di sini.

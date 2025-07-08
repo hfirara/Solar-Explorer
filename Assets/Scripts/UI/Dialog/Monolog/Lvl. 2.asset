@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 2
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: "Langit kuning tebal\u2026 ini pasti Venus."
+  - speakerName: Astro
+    line: Rasanya seperti dikelilingi kabut panas.
+  - speakerName: Astro
+    line: Aneh juga, cantik dari jauh, tapi menyimpan bahaya dari dekat.

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q1
   m_EditorClassIdentifier: 
-  questionText: 
+  questionText: Mengapa Saturnus disebut sebagai "Perhiasan Tata Surya"?
   answers:
-  - 
-  - 
-  - 
-  - 
-  correctAnswerIndex: 0
+  - Karena warnanya paling terang
+  - Karena dikelilingi oleh cincin yang indah
+  - Karena mengorbit paling lambat
+  - Karena memiliki suhu tertinggi
+  correctAnswerIndex: 1

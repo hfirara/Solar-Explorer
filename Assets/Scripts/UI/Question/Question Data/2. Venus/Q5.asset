@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3d1ec688060a64fbea95ff00d5cb88, type: 3}
   m_Name: Q5
   m_EditorClassIdentifier: 
-  questionText: pa yang membuat Venus menjadi planet terpanas di Tata Surya?
+  questionText: Apa yang membuat Venus menjadi planet terpanas di Tata Surya?
   answers:
   - 'Dekat dengan Matahari '
   - 'Atmosfernya yang tebal dan kaya karbon dioksida '

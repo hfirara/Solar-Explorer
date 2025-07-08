@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 4
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: "Tanah merah yang luas\u2026 aku akhirnya menginjakkan kaki di Mars."
+  - speakerName: Astro
+    line: Banyak yang berharap tempat ini bisa jadi rumah kedua.
+  - speakerName: Astro
+    line: Aku ingin tahu... seberapa dekat mimpi itu dengan kenyataan?

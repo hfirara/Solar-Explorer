@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Saturnus
   dataLines:
-  - description: Massa Uranus sekitar 14,54 kali massa Bumi.
+  - description: "Massa Saturnus sekitar 95,184 kali massa Bumi dengan suhu permukaan
+      diperkirakan sekitar -180\xB0C."
