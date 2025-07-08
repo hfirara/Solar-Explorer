@@ -7,58 +7,41 @@ using TMPro;
 
 public class EndLevelTrigger : MonoBehaviour
 {
-    [SerializeField] private RocketController rocket;
-    [SerializeField] private GameObject fadeOutPanel;
-    [SerializeField] private CanvasGroup fadeCanvasGroup;
-    [SerializeField] private TMP_Text tamatText;
-    [SerializeField] private float fadeDuration = 1f;
-    [SerializeField] private string mainMenuSceneName = "Menu";
+    public GameObject finishPanel; // Panel ucapan selamat
+    public FadeManager fadeManager;
+    public string menuSceneName = "MenuScene"; // Ganti dengan nama scene menu kamu
 
-    private bool hasEnded = false;
+    private bool hasTriggered = false;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!hasEnded && other.CompareTag("Player"))
+        if (hasTriggered) return;
+        if (collision.CompareTag("Player"))
         {
-            hasEnded = true;
-            StartCoroutine(EndSequence());
+            hasTriggered = true;
+            StartCoroutine(FinishSequence());
         }
     }
 
-    private IEnumerator EndSequence()
+    private IEnumerator FinishSequence()
     {
-        // Stop waktu
-        Time.timeScale = 0f;
+        // Step 1: Fade out
+        yield return fadeManager.StartCoroutine(fadeManager.FadeOut());
 
-        // Meluncur cepat ke depan
-        rocket.LaunchForward(5f);
+        // Step 2: Tampilkan panel ucapan
+        if (finishPanel != null)
+            finishPanel.SetActive(true);
 
-        // Tunggu 1.5 detik secara realtime
-        yield return new WaitForSecondsRealtime(1.5f);
+        // Step 3: Fade in (biar panel kelihatan)
+        yield return fadeManager.StartCoroutine(fadeManager.FadeIn());
 
-        // Fade out ke hitam
-        fadeOutPanel.SetActive(true);
-        if (fadeCanvasGroup != null)
-        {
-            for (float t = 0; t < 1f; t += Time.unscaledDeltaTime / fadeDuration)
-            {
-                fadeCanvasGroup.alpha = t;
-                yield return null;
-            }
-            fadeCanvasGroup.alpha = 1f;
-        }
+        // Step 4: Tunggu player klik atau delay
+        yield return new WaitForSeconds(3f); // Misalnya 3 detik
 
-        // Tampilkan tulisan "Tamat"
-        tamatText.gameObject.SetActive(true);
-        tamatText.text = "Selamat! Kamu telah menyelesaikan misi ekspedisi planet.\nKamu astronot yang hebat 🚀";
+        // Step 5: Fade out lagi
+        yield return fadeManager.StartCoroutine(fadeManager.FadeOut());
 
-        yield return new WaitForSecondsRealtime(3f);
-
-        tamatText.text = "FINISH!";
-        yield return new WaitForSecondsRealtime(2f);
-
-        // Pindah ke Main Menu
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        // Step 6: Ganti scene
+        SceneManager.LoadScene(menuSceneName);
     }
 }

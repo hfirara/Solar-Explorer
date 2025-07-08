@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\UI\Dialog\DialogManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\FadeManager.cs" />
     <Compile Include="Assets\Scripts\EnemyDestroyZone.cs" />
     <Compile Include="Assets\Scripts\UI\FallTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\UIManagerData.cs" />

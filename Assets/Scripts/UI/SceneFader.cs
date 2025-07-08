@@ -1,67 +1,42 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class SceneFader : MonoBehaviour
+public class FadeManager : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup fadeCanvasGroup;
-    [SerializeField] private float fadeDuration = 0.5f;
-    [SerializeField] private string sceneToLoad;
+    public Image fadeImage; // Drag image hitam full screen (alpha 0 awalnya)
+    public float fadeSpeed = 1f;
 
-    [Header("Quiz Reference")]
-    [SerializeField] private QuestionSequenceManager sequenceManager;
-
-    private void Start()
+    private void Awake()
     {
-        StartCoroutine(FadeIn());
-    }
-
-    public void FadeAndLoadScene()
-    {
-        // Cek score minimal 7
-        if (sequenceManager != null && sequenceManager.CorrectCount >= 7)
+        // Pastikan alpha awal 0
+        if (fadeImage != null)
         {
-            StartCoroutine(FadeOutAndLoad());
-        }
-        else
-        {
-            UINotification.Instance.ShowNotification("Score kamu belum ≥ 7");
-            Debug.Log("[SceneFader] Belum memenuhi syarat: score belum ≥ 7");
+            Color c = fadeImage.color;
+            c.a = 0f;
+            fadeImage.color = c;
         }
     }
 
-
-    private IEnumerator FadeOutAndLoad()
+    public IEnumerator FadeOut()
     {
-        fadeCanvasGroup.gameObject.SetActive(true);
-        fadeCanvasGroup.alpha = 0f;
-
-        float time = 0f;
-        while (time < fadeDuration)
+        float alpha = fadeImage.color.a;
+        while (alpha < 1f)
         {
-            time += Time.deltaTime;
-            fadeCanvasGroup.alpha = Mathf.Clamp01(time / fadeDuration);
+            alpha += Time.deltaTime * fadeSpeed;
+            fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
-
-        yield return new WaitForSeconds(0.1f);
-        SceneManager.LoadScene(sceneToLoad);
     }
 
-    private IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
-        fadeCanvasGroup.gameObject.SetActive(true);
-        fadeCanvasGroup.alpha = 1f;
-
-        float time = 0f;
-        while (time < fadeDuration)
+        float alpha = fadeImage.color.a;
+        while (alpha > 0f)
         {
-            time += Time.deltaTime;
-            fadeCanvasGroup.alpha = 1f - Mathf.Clamp01(time / fadeDuration);
+            alpha -= Time.deltaTime * fadeSpeed;
+            fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
-
-        fadeCanvasGroup.gameObject.SetActive(false);
     }
 }
