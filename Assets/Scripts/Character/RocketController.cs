@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class RocketController : MonoBehaviour
 
     [Header("Health")]
     [SerializeField] private int maxHealth = 3;
-    [SerializeField] private PlayerUI playerUI;
+    [SerializeField] public PlayerUI playerUI;
     [SerializeField] private float hurtDuration = 0.2f;
     [SerializeField] private float shakeAmount = 0.1f;
     [SerializeField] private float shakeDuration = 0.2f;
@@ -24,10 +25,13 @@ public class RocketController : MonoBehaviour
     private bool isDodging = false;
     private Animator anim;
 
+    public static RocketController Instance;
+
     AudioManager audioManager;
 
     private void Awake()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -43,6 +47,11 @@ public class RocketController : MonoBehaviour
 
     private void Update()
     {
+        if (!isAlive && Input.GetKeyDown(KeyCode.Space))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
+
         if (!isAlive || isDodging) return;
 
         float verticalInput = Input.GetAxisRaw("Vertical");
@@ -72,7 +81,7 @@ public class RocketController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            audioManager.PlaySFX(audioManager.death);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.death);
             Die();
         }
     }
@@ -110,7 +119,7 @@ public class RocketController : MonoBehaviour
     {
         isAlive = false;
 
-        anim.SetBool("isDead", true); // Trigger animasi jatuh
+        anim.SetBool("isDead", true);
 
         rb.velocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Dynamic;
@@ -121,13 +130,10 @@ public class RocketController : MonoBehaviour
 
     private IEnumerator ShowGameOverAfterDelay()
     {
-        yield return new WaitForSeconds(1f); // kasih waktu roket jatuh dulu
+        yield return new WaitForSeconds(1f);
 
-        // Misalnya panel Game Over kamu aktifkan lewat UI Manager
         if (playerUI != null)
-        {
             playerUI.ShowGameOverPanel();
-        }
     }
 
     public void Dodge(Vector2 direction, float distance = 4f, float duration = 0.4f)
