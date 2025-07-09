@@ -11,7 +11,7 @@ public class RocketController : MonoBehaviour
     [SerializeField] private float verticalLimit = 8f;
 
     [Header("Health")]
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int maxHealth = 5;
     [SerializeField] public PlayerUI playerUI;
     [SerializeField] private float hurtDuration = 0.2f;
     [SerializeField] private float shakeAmount = 0.1f;
@@ -136,7 +136,7 @@ public class RocketController : MonoBehaviour
             playerUI.ShowGameOverPanel();
     }
 
-    public void Dodge(Vector2 direction, float distance = 4f, float duration = 0.4f)
+    public void Dodge(Vector2 direction, float distance = 2f, float duration = 0.4f)
     {
         if (!isAlive || isDodging) return;
         StartCoroutine(DodgeRoutine(direction, distance, duration));
