@@ -145,8 +145,6 @@ public class Player : MonoBehaviour
 
     private void StopRunSFX()
     {
-        // Kalau pakai loop, di sini bisa pakai StopSFX() jika ada
-        // AudioManager.Instance.StopSFX();
         isRunningSFXPlaying = false;
     }
 
@@ -207,7 +205,7 @@ public class Player : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         coll.enabled = false;
 
-        StopRunSFX(); // Pastikan stop SFX saat mati
+        StopRunSFX(); 
 
         GameManager.Instance.GameOver();
     }

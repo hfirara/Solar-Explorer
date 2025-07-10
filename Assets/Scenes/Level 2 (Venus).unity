@@ -5435,7 +5435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012338850144135267, guid: a0f8d1065361835489ee37072620cb9a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8609829953945725808, guid: a0f8d1065361835489ee37072620cb9a, type: 3}
       propertyPath: monologData
