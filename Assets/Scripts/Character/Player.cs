@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     [Header("UI")]
     [SerializeField] public PlayerUI playerUI;
 
+    [SerializeField] private float stepInterval = 0.4f;
+    private float stepTimer = 0f;
+
     private Rigidbody2D rb;
     private Animator anim;
     private Collider2D coll;
@@ -38,8 +41,6 @@ public class Player : MonoBehaviour
     public static Player Instance;
 
     private Transform currentSafePoint;
-
-    private bool isRunningSFXPlaying = false;
 
     private void Awake()
     {
@@ -72,6 +73,31 @@ public class Player : MonoBehaviour
         Move();
         Jumping();
         UpdateAnimationState();
+
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        bool isMoving = Mathf.Abs(horizontal) > 0.1f;
+
+        // 🔥 Bunyi step satu kali langsung saat tap
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)) && IsGrounded())
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.run);
+        }
+
+        // 🔥 Kalau ditekan lama, bunyi berulang
+        if (isMoving && IsGrounded())
+        {
+            stepTimer += Time.deltaTime;
+
+            if (stepTimer >= stepInterval)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.run);
+                stepTimer = 0f;
+            }
+        }
+        else
+        {
+            stepTimer = stepInterval; // reset supaya langsung bunyi pas mulai lagi
+        }
     }
 
     private void Move()
@@ -92,7 +118,6 @@ public class Player : MonoBehaviour
             jumpTimeCounter = jumpTime;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
-            // Play jump SFX sekali di sini
             AudioManager.Instance.PlaySFX(AudioManager.Instance.jump);
         }
 
@@ -117,35 +142,12 @@ public class Player : MonoBehaviour
         {
             anim.SetBool("Jump", true);
             anim.SetBool("Run", false);
-            StopRunSFX();
         }
         else
         {
             anim.SetBool("Jump", false);
-
-            bool isRunning = Mathf.Abs(moveInput) > 0.01f;
-            anim.SetBool("Run", isRunning);
-
-            if (isRunning && !isRunningSFXPlaying)
-            {
-                PlayRunSFX();
-            }
-            else if (!isRunning && isRunningSFXPlaying)
-            {
-                StopRunSFX();
-            }
+            anim.SetBool("Run", Mathf.Abs(moveInput) > 0.01f);
         }
-    }
-
-    private void PlayRunSFX()
-    {
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.run);
-        isRunningSFXPlaying = true;
-    }
-
-    private void StopRunSFX()
-    {
-        isRunningSFXPlaying = false;
     }
 
     private bool IsGrounded()
@@ -164,6 +166,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(Vector2 damageDirection)
     {
         if (isHurt) return;
+
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.hit);
 
         currentHealth--;
         playerUI.UpdateHealthBar(currentHealth, maxHealth);
@@ -204,8 +208,6 @@ public class Player : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
         coll.enabled = false;
-
-        StopRunSFX(); 
 
         GameManager.Instance.GameOver();
     }

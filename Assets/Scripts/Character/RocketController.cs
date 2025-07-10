@@ -73,6 +73,8 @@ public class RocketController : MonoBehaviour
     {
         currentHealth--;
 
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.hit);
+
         if (playerUI != null)
             playerUI.UpdateHealthBar(currentHealth, maxHealth);
 

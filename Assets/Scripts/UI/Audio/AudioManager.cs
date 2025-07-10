@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip buttonClick;
     public AudioClip death;
+    public AudioClip hit;
     public AudioClip jump;
     public AudioClip run;
     public AudioClip pickupInfoClip;
