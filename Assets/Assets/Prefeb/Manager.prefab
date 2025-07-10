@@ -677,7 +677,7 @@ MonoBehaviour:
   buttonClick: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
   death: {fileID: 8300000, guid: f245baedc00782047b8812f9557b5bd1, type: 3}
   jump: {fileID: 8300000, guid: 3aac54b44facf4a46b2ba6dcb2404874, type: 3}
-  run: {fileID: 8300000, guid: b6b57e5e3a341bc49a281bcf48e9b9e4, type: 3}
+  run: {fileID: 8300000, guid: 2e18b25a1bb099b41bcf261d69bb2c4d, type: 3}
   pickupInfoClip: {fileID: 8300000, guid: f9e13d788b30f3c4d84fb8bc10be86f2, type: 3}
   correctAnswerClip: {fileID: 8300000, guid: c755c682e06e59b4881d88e864ab21ee, type: 3}
   wrongAnswerClip: {fileID: 8300000, guid: cfb06011de53d724fb9206d3472322ac, type: 3}
