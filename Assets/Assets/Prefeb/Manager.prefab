@@ -676,6 +676,7 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 6c4e2aee26597df41b6a2b724759ae91, type: 3}
   buttonClick: {fileID: 8300000, guid: c49fa03297fa19b4496bbcd68aa44a70, type: 3}
   death: {fileID: 8300000, guid: f245baedc00782047b8812f9557b5bd1, type: 3}
+  hit: {fileID: 8300000, guid: 58c611199705a1e4bb10840641dfb732, type: 3}
   jump: {fileID: 8300000, guid: 3aac54b44facf4a46b2ba6dcb2404874, type: 3}
   run: {fileID: 8300000, guid: 2e18b25a1bb099b41bcf261d69bb2c4d, type: 3}
   pickupInfoClip: {fileID: 8300000, guid: f9e13d788b30f3c4d84fb8bc10be86f2, type: 3}

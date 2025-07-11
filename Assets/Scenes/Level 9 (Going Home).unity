@@ -2288,6 +2288,18 @@ PrefabInstance:
       propertyPath: m_text
       value: TAMAT
       objectReference: {fileID: 0}
+    - target: {fileID: 6874325052716191369, guid: 7cc247d3691a9c54dba5a1d441a80019, type: 3}
+      propertyPath: m_fontSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874325052716191369, guid: 7cc247d3691a9c54dba5a1d441a80019, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874325052716191369, guid: 7cc247d3691a9c54dba5a1d441a80019, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7021287416191773911, guid: 7cc247d3691a9c54dba5a1d441a80019, type: 3}
       propertyPath: m_IsActive
       value: 0
