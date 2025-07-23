@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -54,6 +55,12 @@ public class PlayerUI : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
+    }
+
+    public void MainMenu()
+    {
+        // Ganti "NamaScene" dengan nama scene yang ingin kamu tuju
+        SceneManager.LoadScene("Menu");
     }
     #endregion
 
