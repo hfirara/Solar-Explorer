@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Saturnus
   dataLines:
-  - description: Saturnus memiliki 7 cincin utama dengan jarak antar cincin yang
-      menciptakan tampilan yang indah dan ikonik.
+  - description: Memiliki 7 cincin utama dengan jarak antar cincin menciptakan tampilan
+      yang indah dan ikonik.

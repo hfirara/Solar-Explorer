@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Neptunus
   dataLines:
-  - description: Penemuan Neptunus unik karena ditemukan secara matematis dahulu,
-      baru diamati dengan teleskop.
+  - description: Neptunus ditemukan secara matematis dahulu, baru diamati dengan
+      teleskop.

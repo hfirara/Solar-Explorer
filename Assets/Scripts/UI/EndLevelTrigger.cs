@@ -8,8 +8,8 @@ using TMPro;
 public class EndLevelTrigger : MonoBehaviour
 {
     public GameObject finishPanel; // Panel ucapan selamat
-    public FadeManager fadeManager;
-    public string menuSceneName = "MenuScene"; // Ganti dengan nama scene menu kamu
+    //public FadeManager fadeManager;
+    public LayerFader layerfade;
 
     private bool hasTriggered = false;
 
@@ -25,23 +25,28 @@ public class EndLevelTrigger : MonoBehaviour
 
     private IEnumerator FinishSequence()
     {
-        // Step 1: Fade out
-        yield return fadeManager.StartCoroutine(fadeManager.FadeOut());
+        Debug.Log("Fade Out pertama");
+        yield return layerfade.StartCoroutine(layerfade.FadeOut());
 
-        // Step 2: Tampilkan panel ucapan
+        Debug.Log("Panel muncul");
         if (finishPanel != null)
             finishPanel.SetActive(true);
 
-        // Step 3: Fade in (biar panel kelihatan)
-        yield return fadeManager.StartCoroutine(fadeManager.FadeIn());
+        Debug.Log("Fade In panel");
+        yield return layerfade.StartCoroutine(layerfade.FadeIn());
 
-        // Step 4: Tunggu player klik atau delay
-        yield return new WaitForSeconds(3f); // Misalnya 3 detik
+        Debug.Log("Tunggu 1 detik");
+        yield return new WaitForSecondsRealtime(1f);
+        
+        Debug.Log("Fade Out terakhir");
+        yield return layerfade.StartCoroutine(layerfade.FadeOut());
 
-        // Step 5: Fade out lagi
-        yield return fadeManager.StartCoroutine(fadeManager.FadeOut());
+        Debug.Log("Panel muncul");
+        if (finishPanel != null)
+            finishPanel.SetActive(false);
 
-        // Step 6: Ganti scene
-        SceneManager.LoadScene(menuSceneName);
+        Debug.Log("Scene akan diganti ke Menu...");
+        SceneManager.LoadScene("Menu");
+        //Debug.Log("Sudah perintah ganti scene.");*/
     }
 }

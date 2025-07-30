@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Jupiter
   dataLines:
-  - description: Jupiter adalah planet terbesar di Tata Surya, ukurannya lebih dari
-      dua kali gabungan ketujuh planet lainnya.
+  - description: Planet terbesar di Tata Surya, ukurannya lebih dari dua kali gabungan
+      ketujuh planet lainnya.

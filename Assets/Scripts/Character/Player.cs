@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -97,6 +98,13 @@ public class Player : MonoBehaviour
         else
         {
             stepTimer = stepInterval; // reset supaya langsung bunyi pas mulai lagi
+        }
+
+        // 🔄 Restart level dengan tombol R
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currentScene.name);
         }
     }
 

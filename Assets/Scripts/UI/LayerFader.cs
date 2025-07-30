@@ -23,7 +23,7 @@ public class LayerFader : MonoBehaviour
         StartCoroutine(FadeIn());
     }
 
-    private IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         float time = 0f;
 
@@ -43,7 +43,36 @@ public class LayerFader : MonoBehaviour
         StartCoroutine(FadeOutAndLoad());
     }
 
-    private IEnumerator FadeOutAndLoad()
+    public IEnumerator FadeOut()
+    {
+        if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.gameObject.SetActive(true);
+        }
+        
+        float time = 0f;
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Clamp01(time / fadeDuration);
+            yield return null;
+        }
+
+        /*if (fadeCanvasGroup != null)
+        {
+            fadeCanvasGroup.gameObject.SetActive(true);
+        }
+
+        float time = 0f;
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Clamp01(time / fadeDuration);
+            yield return null;
+        }*/
+    }
+
+    public IEnumerator FadeOutAndLoad()
     {
         if (fadeCanvasGroup != null)
         {

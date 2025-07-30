@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae5e18b1fd1fef4392d55e6300e4d46, type: 3}
   m_Name: Lvl. 3
   m_EditorClassIdentifier: 
-  dialogLines: []
+  dialogLines:
+  - speakerName: Astro
+    line: Bumi... Planet tempat tinggal umat manusia.
+  - speakerName: Astro
+    line: Walaupun begitu, aku harus mencari info dengan lebih teliti.

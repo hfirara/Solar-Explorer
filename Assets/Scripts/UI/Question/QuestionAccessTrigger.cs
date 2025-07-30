@@ -41,7 +41,7 @@ public class QuestionAccessTrigger : MonoBehaviour
                     }
                     else
                     {
-                        //UINotification.Instance.ShowNotification("Kamu lulus quiz.");
+                        UINotification.Instance.ShowNotification("Kamu sudah lulus quiz. Tidak perlu ulangi lagi.");
                         Debug.Log("Kamu sudah lulus quiz. Tidak perlu ulangi lagi.");
                     }
                 }

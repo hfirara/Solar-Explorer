@@ -26,8 +26,8 @@ public class SceneFader : MonoBehaviour
         }
         else
         {
-            UINotification.Instance.ShowNotification("Score kamu belum ≥ 7");
-            Debug.Log("[SceneFader] Belum memenuhi syarat: score belum ≥ 7");
+            UINotification.Instance.ShowNotification("Score kamu belum lebih dari 7");
+            Debug.Log("[SceneFader] Belum memenuhi syarat: score belum lebih dari 7");
         }
     }
 

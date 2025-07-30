@@ -23,6 +23,11 @@ public class QuestionSequenceManager : MonoBehaviour
     public GameObject panelResult;
     public TMP_Text textScore;
     public Image[] stars;
+    
+    [Header("Star Sprites")]
+    public Sprite starGold;
+    public Sprite starSilver;
+    public Sprite starEmpty;
 
     [HideInInspector]
     public bool hasPassedQuiz = false;
@@ -100,10 +105,24 @@ public class QuestionSequenceManager : MonoBehaviour
         panelResult.SetActive(true);
         textScore.text = $"Benar: {correctCount} dari {allQuestions.Count}";
 
+        // Hitung jumlah bintang (0 sampai 3)
         int starCount = Mathf.RoundToInt((correctCount / (float)allQuestions.Count) * 3);
+
+        // Tentukan jenis bintang berdasarkan skor total
+        Sprite starSprite;
+
+        if (correctCount >= 8)
+            starSprite = starGold;
+        else if (correctCount >= 5)
+            starSprite = starSilver;
+        else
+            starSprite = starEmpty;
+
+        // Pasang sprite ke setiap slot bintang
         for (int i = 0; i < stars.Length; i++)
         {
-            stars[i].enabled = i < starCount;
+            stars[i].sprite = i < starCount ? starSprite : starEmpty;
+            stars[i].enabled = true;
         }
 
         hasPassedQuiz = correctCount >= 7;

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryID: Neptunus
   dataLines:
-  - description: Atmosfer Neptunus terdiri dari hidrogen dan helium dengan angin
-      sangat kencang, lebih dari 600 km/jam.
+  - description: Atmosfer terdiri dari hidrogen dan helium dengan angin sangat kencang,
+      lebih dari 600 km/jam.
