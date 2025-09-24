@@ -8,6 +8,9 @@ TagManager:
   - Background
   - Enemy
   - UI
+  - Camera
+  - InteractionText
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -15,11 +18,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Background
+  - Camera Confiner
+  - Player
+  - Pickable
   - 
   - 
   - 

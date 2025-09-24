@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Menu.unity
+    guid: b30a037727e63a247a51a1cf61dd645b
+  - enabled: 1
+    path: Assets/Scenes/Level 0 (Spaceship).unity
+    guid: 781971ca4b047ee499be6ef25a93d2e9
+  - enabled: 1
+    path: Assets/Scenes/Level 1 (Mercury).unity
+    guid: 99cbf088443705e4a9e3a4acceef2886
+  - enabled: 0
+    path: Assets/Scenes/Level 1.1 (Quiz).unity
+    guid: 868229401542af84ea72da598f021a03
+  - enabled: 1
+    path: Assets/Scenes/Level 2 (Venus).unity
+    guid: 8e8f5f47446fd6643ad921201c7a72a5
+  - enabled: 1
+    path: Assets/Scenes/Level 3 (Earth).unity
+    guid: 64dd635ac3daa904a8895d48b2bce70b
+  - enabled: 1
+    path: Assets/Scenes/Level 4 (Mars).unity
+    guid: 22a8c356165d0844196858e76dc9b2fc
+  - enabled: 1
+    path: Assets/Scenes/Level 5 (Jupiter).unity
+    guid: f49814a57ad46fb48a52739b961ebbc0
+  - enabled: 1
+    path: Assets/Scenes/Level 6 (Saturn).unity
+    guid: 69cb33d7037301e44a03005001e61b35
+  - enabled: 1
+    path: Assets/Scenes/Level 7 (Uranus).unity
+    guid: fd3ca11918226d548946a1031cdf6ffc
+  - enabled: 1
+    path: Assets/Scenes/Level 8 (Neptune).unity
+    guid: 4a45fbd6ea888664093375ec883c6eb0
+  - enabled: 1
+    path: Assets/Scenes/Level 9 (Going Home).unity
+    guid: b8a186b9340946d4fb8a61fe1177353b
   m_configObjects: {}
